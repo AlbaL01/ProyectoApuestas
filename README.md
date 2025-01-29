@@ -3,10 +3,10 @@
 ## Descripción del Proyecto
 OneGoal es una plataforma web innovadora de apuestas deportivas enfocada en la interacción social. Se diferencia de otras plataformas de la misma índole en que OneGoal permite a los usuarios formar comunidades e interactuar libremente, además de que permite crear desafíos a otros usuarios con apuestas personalizados.
 
-##Créditos
+## Créditos
 Este proyecto ha sido desarrollado por Alba Fernández Montero y Alba López Mancera.
 
-##Licencia
+## Licencia
 Este proyecto está bajo la licencia Creative Commons BY.
 
 ## Tecnologías Utilizadas
