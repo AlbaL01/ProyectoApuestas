@@ -6,7 +6,7 @@ OneGoal es una plataforma web innovadora de apuestas deportivas enfocada en la i
 ## Tecnologías Utilizadas
 
 - **Figma**: Herramienta para el diseño preliminar y prototipado de la interfaz.
-- - **Git**: Para control de versiones y colaboración en el desarrollo.
+- **Git**: Para control de versiones y colaboración en el desarrollo.
 - **GitHub**: Repositorio para almacenar el código fuente del proyecto.
 - **HTML5**: Para la estructura semántica de la página.
 - **CSS3**: Con Flexbox y CSS Grid para la maquetación responsiva.
