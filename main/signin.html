@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneGoal SignIn</title>
+    <link rel="stylesheet" href="./CSS/signin.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
+        </div>
+
+        <div class="header__icons">
+            <a href="index.html"><img src="../assets/header/si--home-line.png" alt="Home"
+                    class="header__icon__selected" /></a>
+            <a href="bets.html"><img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon" /></a>
+            <a href="chat.html"><img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat"
+                    class="header__icon" /></a>
+            <a href="personal.html"><img src="../assets/header/mingcute--user-3-line.png" alt="Avatar"
+                    class="header__icon" /></a>
+            <div><img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon" /></div>
+            <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon" /></div>
+        </div>
+
+        <div class="header__balance">
+            <div class="header__balance-text">$0,00</div>
+            <button class="header__balance-button"><img src="../assets/header/tabler--plus.png" alt="Settings"
+                    class="header__add-balance" /></button>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="signup">
+            <div class="signup__container">
+                <h2 class="signup__title">Sign up now and start winning!</h2>
+                <p class="signup__subtitle">The most Secure Betting Platform!</p>
+
+                <form class="signup__form">
+                    <label class="signup__label" for="username">Username</label>
+                    <input class="signup__input" type="text" id="username" placeholder="Write a username">
+
+                    <label class="signup__label" for="email">E-mail</label>
+                    <input class="signup__input" type="email" id="email" placeholder="Write your e-mail">
+
+                    <label class="signup__label" for="phone">Phone Number</label>
+                    <input class="signup__input" type="tel" id="phone" placeholder="Write your phone number">
+
+                    <label class="signup__label" for="dob">Date of birth</label>
+                    <div class="signup__input-wrapper">
+                        <input class="signup__input" type="date" id="dob">
+                        <span class="signup__warning-text"><img src="../assets/header/mage--exclamation-circle.png" class="signup__warning-img"> <i>Must Be +18</i></span>
+                    </div>
+
+                    <label class="signup__label" for="currency">Preferred Currency</label>
+                    <select class="signup__input signup__select" id="currency">
+                        <option value="" disabled selected>Select a currency</option>
+                        <option value="usd">US Dollar (USD)</option>
+                        <option value="eur">Euro (EUR)</option>
+                        <option value="gbp">British Pound (GBP)</option>
+                        <option value="jpy">Japanese Yen (JPY)</option>
+                        <option value="mxn">Mexican Peso (MXN)</option>
+                    </select>
+
+
+                    <label class="signup__label" for="password">Password</label>
+                    <input class="signup__input" type="password" id="password" placeholder="Write a password">
+
+                    <label class="signup__label" for="confirm-password">Confirm Password</label>
+                    <input class="signup__input" type="password" id="confirm-password" placeholder="Confirm the password">
+
+                    <button class="signup__button" type="submit">Sign In</button>
+
+                    <p class="signup__footer">
+                        Already have an account? <a href="login.html" class="login__link">Log In</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__payments">
+            <a href="https://www.visa.com" target="_blank">
+                <img src="../assets/footer/visa.png" alt="Visa" class="footer__payment-icon">
+            </a>
+            <a href="https://www.paypal.com/es/signin" target="_blank">
+                <img src="../assets/footer/paypal.png" alt="PayPal" class="footer__payment-icon">
+            </a>
+            <a href="https://www.apple.com/apple-pay/" target="_blank">
+                <img src="../assets/footer/applepay.png" alt="Apple Pay" class="footer__payment-icon">
+            </a>
+            <a href="https://www.mastercard.com" target="_blank">
+                <img src="../assets/footer/mastercard.png" alt="MasterCard" class="footer__payment-icon">
+            </a>
+        </div>
+
+        <div class="footer__text-down">
+            <p>Terms And Conditions</p>
+            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon" /><img
+                    src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon" /> 2023
+                OneGoal, Inc.</p>
+            <div class="footer__socials">
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../assets/footer/facebook.png" alt="Facebook" class="footer__socials-icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../assets/footer/instagram.png" alt="Instagram" class="footer__socials-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../assets/footer/twitter.png" alt="Twitter" class="footer__socials-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
