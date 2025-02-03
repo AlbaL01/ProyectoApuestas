@@ -144,6 +144,13 @@ h2 {
     color: var(--gray1);
     font-weight: bold;
 }
+.tab a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 
 .tab.active {
     background: var(--white);
