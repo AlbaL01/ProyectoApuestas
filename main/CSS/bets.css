@@ -44,9 +44,10 @@ body {
     font-size: 24px;
     color: var(--black);
     background-color: var(--white);
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     display: flex;
+    padding:5px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -73,7 +74,10 @@ body {
     border-radius: 20px;
     border: 2px solid var(--green2);
 }
-
+.header__balance-button{
+    border: none;
+    background-color: var(--white);
+}
 .header__balance-text {
     font-size: 18px;
     margin-right: 5px;
