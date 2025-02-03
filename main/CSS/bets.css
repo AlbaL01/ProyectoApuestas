@@ -9,6 +9,7 @@
     --black: #202322;
     --orange: #DE7C0B;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -31,6 +32,7 @@ body {
     height: 50px;
     width: auto;
 }
+
 .header__icons {
     display: flex;
     gap: 50px;
@@ -47,7 +49,7 @@ body {
     width: 25px;
     height: 25px;
     display: flex;
-    padding:5px;
+    padding: 5px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -74,10 +76,12 @@ body {
     border-radius: 20px;
     border: 2px solid var(--green2);
 }
-.header__balance-button{
+
+.header__balance-button {
     border: none;
     background-color: var(--white);
 }
+
 .header__balance-text {
     font-size: 18px;
     margin-right: 5px;
@@ -104,7 +108,7 @@ body {
 main {
     padding: 20px;
     text-align: center;
-    max-width: 1300px; /* Aumentado para mayor ancho */
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -148,6 +152,7 @@ h2 {
     color: var(--gray1);
     font-weight: bold;
 }
+
 .tab a {
     text-decoration: none; 
     color: inherit; 
@@ -165,7 +170,7 @@ h2 {
 /* Matches section */
 .matches {
     text-align: left;
-    max-width: 1300px; 
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -205,9 +210,8 @@ h3 {
     font-weight: bold;
 }
 
-/* Matches section for "This Week" with gray border */
 .matches.upcoming .match {
-    border: 4px solid var(--gray2); /* Borde gris */
+    border: 4px solid var(--gray2);
 }
 
 /* Footer */
@@ -240,9 +244,10 @@ h3 {
 
 /* Redes sociales */
 .footer__socials {
-    display: flex;
+    display: inline-flex; 
+    align-items: center;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 7px;
 }
 
 .footer__socials-icon {
@@ -257,8 +262,28 @@ h3 {
 
 .footer__text-down {
     font-size: 14px;
-    gap:30px;
-    margin: 5px 0;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 25px;
+    text-align: center;
+    width: auto;
+}
+
+.footer__text-down p {
+    margin: 0; 
+    display: flex;
+    align-items: center;
+}
+
+
+.footerCC__icon {
+    width: auto;
+    height: 23px;
+    display: inline-flex; 
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
 }
