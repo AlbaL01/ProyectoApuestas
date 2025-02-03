@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneGoal Betting</title>
+    <link rel="stylesheet" href="./CSS/ranking.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
+        </div>
+
+        <div class="header__icons">
+
+            <a href="index.html" ><img src="../assets/header/si--home-line.png" alt="Home" class="header__icon"/></a>
+            <a href="bets.html" ><img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon__selected"/></a>
+            <a href="chat.html" ><img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat" class="header__icon"/></a>
+            <a href="personal.html" ><img src="../assets/header/mingcute--user-3-line.png" alt="Avatar" class="header__icon"/></a>
+            <div ><img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon"/></div>
+            <div ><img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon"/></div>
+
+        </div>
+
+        <div class="header__balance">
+            <div class="header__balance-text">$20,200</div>
+            <button class="header__balance-button"><img src="../assets/header/tabler--plus.png" alt="Settings" class="header__add-balance"/></button>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Betting</h2>
+        <div class="tab-container">
+            <button class="tab "><a href="bets.html">My Bets</a></button>
+            <button class="tab active"><a href="ranking.html">Ranking</a></button>
+        </div>
+
+        <section class="leagues">
+            <div class="leagues__filters">
+                <span class="leagues__filter leagues__filter--active">
+                    <a href="../assets/LeagueLogos/PL.png">
+                        <img src="../assets/LeagueLogos/PL.png" alt="PL logo">
+                    </a>
+                </span>
+                <span class="leagues__filter ">
+                    <a href="../assets/LeagueLogos/A.png">
+                        <img src="../assets/LeagueLogos/A.png" alt="A logo">
+                    </a>
+                </span>
+                <span class="leagues__filter">
+                    <a href="../assets/LeagueLogos/BL.png">
+                        <img src="../assets/LeagueLogos/BL.png" alt="BL logo">
+                    </a>
+                </span>
+                <span class="leagues__filter">
+                    <a href="../assets/LeagueLogos/E.png">
+                        <img src="../assets/LeagueLogos/E.png" alt="E logo">
+                    </a>
+                </span>
+                <span class="leagues__filter">
+                    <a href="../assets/LeagueLogos/L1.png">
+                        <img src="../assets/LeagueLogos/L1.png" alt="L1 logo">
+                    </a>
+                </span>
+                <span class="leagues__filter">
+                    <a href="../assets/LeagueLogos/LL.png">
+                        <img src="../assets/LeagueLogos/LL.png" alt="LL logo">
+                    </a>
+                </span>
+
+            </div>
+        </section>
+        <h3 class="hits__title">Hits</h3>
+        <section class="hits">
+            <div class="ranking">
+                <div class="ranking__item">
+                    <span class="ranking__position ranking__position--first">1</span>
+                    <img src="../assets/img/ej7.jpg" alt="User 1" class="ranking__avatar">
+                    <span class="ranking__name">Data</span>
+                    <span class="ranking__score">20</span>
+                </div>
+                <div class="ranking__item">
+                    <span class="ranking__position ranking__position--second">2</span>
+                    <img src="../assets/img/ej1.jpg" alt="User 2" class="ranking__avatar">
+                    <span class="ranking__name">Data</span>
+                    <span class="ranking__score">15</span>
+                </div>
+                <div class="ranking__item">
+                    <span class="ranking__position ranking__position--third">3</span>
+                    <img src="../assets/img/ej4.jpg" alt="User 3" class="ranking__avatar">
+                    <span class="ranking__name">Data</span>
+                    <span class="ranking__score">10</span>
+                </div>
+            </div>
+        </section>
+        
+        <h2>Challenges</h2>
+        <section class="challenges">
+            <h3>Actives</h3>
+            <section class="actives">
+                <div class="active">
+                    <div class="actives_item">
+                        <img src="../assets/img/ej7.jpg" alt="User 1" class="actives__avatar">
+                        <span class="ranking__name">Data</span>
+                        <div class="actives__score-container">
+                            <span class="actives__score">Exact Score</span>
+                            <span class="actives_data">Data  Data</span>
+                        </div>
+                    </div>
+                    <div class="actives_item">
+                        <img src="../assets/img/ej1.jpg" alt="User 1" class="actives__avatar">
+                        <span class="ranking__name">Data</span>
+                        <div class="actives__score-container">
+                            <span class="actives__score">Exact Score</span>
+                            <span class="actives_data">Data  Data</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="challenges upcoming">
+            <h3>New Pool</h3>
+            <section class="pools">
+                <div class="pool">
+                    <div class="pools__item">
+                        <span class="pool__score">Exact Score</span>
+                            <span class="pool__info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                    <div class="pools__item">
+                        <span class="pool__score">Parlay Bet</span>
+                            <span class="pool__info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                    <div class="pools__item">
+                        <span class="pool__score">Classic Challenge</span>
+                            <span class="pool__info">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+                <button class="pool__button">Create Pool</button>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__payments">
+            <a href="https://www.visa.com" target="_blank">
+                <img src="../assets/footer/visa.png" alt="Visa" class="footer__payment-icon">
+            </a>
+            <a href="https://www.paypal.com/es/signin" target="_blank">
+                <img src="../assets/footer/paypal.png" alt="PayPal" class="footer__payment-icon">
+            </a>
+            <a href="https://www.apple.com/apple-pay/" target="_blank">
+                <img src="../assets/footer/applepay.png" alt="Apple Pay" class="footer__payment-icon">
+            </a>
+            <a href="https://www.mastercard.com" target="_blank">
+                <img src="../assets/footer/mastercard.png" alt="MasterCard" class="footer__payment-icon">
+            </a>
+        </div>
+
+        <div class="footer__text-down">
+            <p>Terms And Conditions</p>
+            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon"/><img src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon"/> 2023 OneGoal, Inc.</p>
+            <div class="footer__socials">
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../assets/footer/facebook.png" alt="Facebook" class="footer__socials-icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../assets/footer/instagram.png" alt="Instagram" class="footer__socials-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../assets/footer/twitter.png" alt="Twitter" class="footer__socials-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
