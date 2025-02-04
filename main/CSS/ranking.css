@@ -133,7 +133,7 @@ h2 {
     display: flex;
     justify-content: center;
     background: var(--gray2);
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     margin-bottom: 20px;
     max-width: 880px;
@@ -142,7 +142,7 @@ h2 {
 
 .tab {
     flex: 1;
-    padding: 10px 20px;
+    padding: 30px 20px;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -203,7 +203,7 @@ h2 {
     max-width: 850px;
     height: 250px;
     margin: 10px auto;
-    padding: 20px 30px;
+    padding: 30px 40px 45px 40px;
     background-color: var(--gray2);
     border-radius: 10px;
     text-align: center;
@@ -285,7 +285,7 @@ h2 {
     max-width: 850px;
     height: 160px;
     margin: 10px auto;
-    padding: 20px 30px;
+    padding: 35px 35px 20px 35px;
     background-color: var(--green2);
     border-radius: 10px;
     text-align: center;
@@ -419,10 +419,12 @@ h3 {
     text-align: center;
     padding: 12px 30px; 
     margin-top: 20px;
+    transition: transform 0.3s ease;
 }
 
 .pool__button:hover{
     background-color: var(--yellow);
+    transform: scale(1.2);
 }
 
 
