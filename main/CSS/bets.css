@@ -133,7 +133,7 @@ h2 {
     display: flex;
     justify-content: center;
     background: var(--gray2);
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     margin-bottom: 20px;
     max-width: 880px;
@@ -142,7 +142,7 @@ h2 {
 
 .tab {
     flex: 1;
-    padding: 10px 20px;
+    padding: 30px 20px;
     border: none;
     background: transparent;
     cursor: pointer;
@@ -152,6 +152,7 @@ h2 {
     color: var(--gray1);
     font-weight: bold;
 }
+
 
 .tab a {
     text-decoration: none; 
