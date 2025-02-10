@@ -511,14 +511,14 @@ main {
 /* Media Queries para pantallas de tabletas y dispositivos medianos */
 @media (min-width: 768px) and (max-width: 1224px) {
     .header__icon_desktop {
-        display: block;
+        display: none !important;
     }
     .header__icon_mobile {
-        display: none; /* Oculta los íconos móviles en tabletas */
+        display: flex; /* Oculta los íconos móviles en tabletas */
     }
 
     .mobile-menu {
-        display: none; /* Oculta el menú móvil en tabletas */
+        display: flex; /* Oculta el menú móvil en tabletas */
     }
 
     .header__icons{
@@ -682,15 +682,15 @@ main {
 /* Media Queries para pantallas pequeñas (móviles y tabletas) */
 @media (width <= 768px) {
     body {
-        display: flex;               /* Convierte el body en un contenedor flex */
-        flex-direction: column;      /* Asegura que los elementos se alineen en una columna */
-        justify-content: center;     /* Centra el contenido verticalmente */
-        align-items: center;         /* Centra el contenido horizontalmente */
-        height: 100vh;                /* Asegura que el body ocupe toda la altura de la ventana */
-        margin: 0;                    /* Elimina márgenes por defecto */
+        display: flex;         
+        flex-direction: column;     
+        justify-content: center;     
+        align-items: center;         
+        height: 100vh;                
+        margin: 0;                   
     }
     .header__icon_desktop {
-        display: none; /* Oculta el header en pantallas móviles */
+        display: none !important;
     }
     .header__icon_mobile{
         margin-left: -50px;
@@ -788,6 +788,7 @@ main {
     .match__score {
         flex-direction: row;
         gap: 10px;
+        font-size: 18px;
     }
 
     /* Footer */
@@ -808,8 +809,9 @@ main {
 
     /* Menu móvil */
     .mobile-menu {
-        width: 70%; /* Ajusta el tamaño del menú */
-        bottom: 20px; /* Ajusta la posición */
+        width: 70%; 
+        display: flex !important; /* Asegura que se muestre */
+        bottom: 20px;
         padding: 10px 0;
     }
 
