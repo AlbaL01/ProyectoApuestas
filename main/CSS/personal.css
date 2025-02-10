@@ -11,6 +11,44 @@
     --orange: #DE7C0B;
 }
 
+/* Estilos de tipografía */
+h1 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 52px;
+}
+
+h2 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 800; /* Extrabold */
+    font-size: 22px;
+    line-height: 52px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 22px;
+    line-height: 48px;
+}
+
+h4 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 20px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    line-height: 24px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -186,10 +224,11 @@ main {
 }
 
 .profile__stat {
-    padding: 5px 15px;
+    padding: 10px 15px;
     border: 2px solid var(--green2);
     border-radius: 20px;
     transition: transform 0.3s ease;
+    height:50px;
 }
 
 .profile__stat:hover {
@@ -202,6 +241,7 @@ main {
     text-decoration: none;
     color: inherit;
     display: flex;
+    gap:5px;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -209,12 +249,12 @@ main {
 }
 
 .profile__stat-label {
-    font-size: 14px;
     display: block;
+    margin-top: -5px;
 }
 
 .profile__stat-value {
-    font-size: 18px;
+    margin-top: -10px;
     font-weight: bold;
 }
 
@@ -240,11 +280,11 @@ main {
 .profile__button {
     background-color: var(--green2);
     border: none;
-    padding: 10px 20px;
+    padding: 0 15px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .profile__button--edit {
@@ -258,21 +298,10 @@ main {
     transform: scale(1.1);
 }
 
-
-/* History */
-.profile__history {
-    margin-top: 30px;
-}
-
-.profile__history-title {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-}
-
+/* Historia */
 .profile__history-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     gap: 15px;
     margin: auto;
 }
@@ -282,25 +311,61 @@ main {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+    position: relative;
 }
 
+/* Títulos dentro de cada tarjeta */
 .profile__history-card-title {
     font-size: 18px;
     font-weight: bold;
-    margin: -2px;
+    margin: 0;
 }
 
+/* Subtítulo del "See More" */
 .profile__history-card-subtitle {
     font-size: 12px;
     color: var(--gray1);
     text-decoration: none;
 }
 
-.profile__history-card-value {
-    font-size: 18px;
-    font-weight: bold;
+/* Para la parte superior de cada tarjeta (title + see more) */
+.profile__history-card > .top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
+/* Para la parte inferior de cada tarjeta */
+.profile__history-card > .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+/* Alineación del porcentaje - Primera tarjeta (top) */
+.profile__history-card-value.top {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 65%; 
+    transform: translateY(-50%);
+}
+
+/* Alineación del porcentaje - Segunda tarjeta (bottom) */
+.profile__history-card-value.bottom {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute; 
+    right: 15px; 
+    bottom: 65%;
+    transform: translateY(50%);
+}
 /* Footer */
 .footer {
     display: flex;
