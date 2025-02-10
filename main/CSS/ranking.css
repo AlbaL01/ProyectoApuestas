@@ -17,7 +17,83 @@ body {
     background-color: var(--white);
     color: var(--black);
 }
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff2'),
+         url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/Fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos de tipografía */
+h1 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 52px;
+}
+
+h2 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 800; /* Extrabold */
+    font-size: 22px;
+    line-height: 52px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 22px;
+    line-height: 48px;
+    text-align: left;
+}
+
+h4 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 20px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--gray1);
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.extra-small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.caption {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+}
 /* Header */
 .header {
     display: flex;
@@ -121,13 +197,6 @@ main {
     margin: 0 auto;
 }
 
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: left;
-    margin: 0;
-}
-
 /* Tabs */
 .tab-container {
     display: flex;
@@ -140,7 +209,7 @@ h2 {
     margin: 0 auto;
 }
 
-.tab {
+.tab, .tab_active {
     flex: 1;
     padding: 30px 20px;
     border: none;
@@ -161,10 +230,11 @@ h2 {
     height: 100%;
 }
 
-.tab.active {
+.tab_active {
     background: var(--white);
     font-weight: bold;
     border-radius: 10px;
+    
 }
 
 /*Leagues*/
@@ -203,7 +273,7 @@ h2 {
     max-width: 850px;
     height: 250px;
     margin: 10px auto;
-    padding: 30px 40px 45px 40px;
+    padding: 100px 40px 150px 40px;
     background-color: var(--gray2);
     border-radius: 10px;
     text-align: center;
@@ -218,6 +288,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: -4rem; 
 }
 
 .ranking__item {
@@ -225,17 +296,16 @@ h2 {
     align-items: center;
     justify-content: space-between;
     background: var(--white);
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 
 .ranking__position {
     font-size: 1.8rem;
     font-weight: bold;
-    padding: 5px 10px;
     border-radius: 6px;
     display: inline-block;
     min-width: 30px;
@@ -243,7 +313,7 @@ h2 {
 }
 
 .ranking__position--first {
-    background-color: var(--yellow);  
+    background-color: var(--yellow) ;  
     color: black; 
     padding: 10px; 
 }
@@ -273,10 +343,13 @@ h2 {
 
 }
 
-.ranking__score {
+.ranking__score, .ranking__score--first {
     font-size: 2rem;
     font-weight: bold;
     color:var(--black);
+}
+.ranking__score--first{
+    text-shadow:  0px 0px 5px var(--yellow) , 0px 0px 10px var(--yellow);
 }
 
 /*Actives*/
@@ -293,7 +366,8 @@ h2 {
 .active {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    margin-top: -1rem;
 }
 
 .actives_item {
@@ -346,13 +420,6 @@ h2 {
     text-align: left;
     max-width: 1300px;
     margin: 0 auto;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--gray1);
-    text-transform: uppercase;
 }
 
 .challenge {
@@ -417,7 +484,7 @@ h3 {
     border-radius: 25px;
     font-weight: bold;
     text-align: center;
-    padding: 12px 30px; 
+    padding: 5px 30px; 
     margin-top: 20px;
     transition: transform 0.3s ease;
 }
