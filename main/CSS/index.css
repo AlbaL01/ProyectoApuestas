@@ -682,13 +682,14 @@ main {
 /* Media Queries para pantallas pequeñas (móviles y tabletas) */
 @media (width <= 768px) {
     body {
-        display: flex;         
-        flex-direction: column;     
-        justify-content: center;     
-        align-items: center;         
-        height: 100vh;                
-        margin: 0;                   
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        min-height: 100vh;
+      }
+      
     .header__icon_desktop {
         display: none !important;
     }
@@ -698,11 +699,14 @@ main {
         margin-right: 20px;
     }
     .mobile-menu {
-        display: flex; /* Muestra el menú móvil */
-    }
+        width: 100%; /* O ajusta a algo más pequeño si es necesario */
+        display: flex;
+        padding: 10px 0;
+      }
+      
     .header__logo-img {
         height: 40px; /* Reduce el tamaño del logo */
-        margin-left: -50px;
+        margin-left: 0;
     }
 
     .header__icons {
@@ -763,8 +767,8 @@ main {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
         grid-gap: 10px;
         margin-top: -2rem;
-        margin-bottom: 2rem;
-        margin-left: 5rem;
+        margin-right:1rem;
+        margin-bottom:1rem;
     }
     
     .leagues__filter {
@@ -776,6 +780,7 @@ main {
     .leagues__grid {
         flex-direction: column;
         margin-left: -2rem;
+        margin-bottom:-6rem;
     }
 
     /* Grid de partidos */
@@ -795,7 +800,6 @@ main {
     .footer {
         padding: 8rem 15px;
         gap: 15px;
-        margin-top: -10rem;
     }
 
     .footer__socials {
