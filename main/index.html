@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneGoal</title>
     <link rel="stylesheet" href="./CSS/index.css">
-        <link rel="icon" type="image/png" href="../assets/OneGoalLogos/logonegro.png">
-    
+    <link rel="icon" type="image/png" href="../assets/OneGoalLogos/logonegro.png">
+
 </head>
 
 <body>
+    <!-- Header para pantallas grandes -->
     <header class="header">
         <div class="header__logo">
             <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
@@ -18,25 +19,25 @@
 
         <div class="header__icons">
             <a href="index.html"><img src="../assets/header/si--home-line.png" alt="Home"
-                    class="header__icon__selected" /></a>
-            <a href="bets.html"><img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon" /></a>
+                    class="header__icon__selected header__icon_desktop" /></a> 
+                    <!-- hay que añadir el header__icon_desktop para que pueda cogerlo -->
+            <a href="bets.html"><img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon header__icon_desktop" /></a>
             <a href="chat.html"><img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat"
-                    class="header__icon" /></a>
+                    class="header__icon header__icon_desktop" /></a>
             <a href="signin.html"><img src="../assets/header/mingcute--user-3-line.png" alt="Avatar"
-                    class="header__icon" /></a>
-            <div><img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon" /></div>
-            <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon" /></div>
+                    class="header__icon header__icon_desktop" /></a>
+            <div class="header__icon_mobile"><div><img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon" /></div>
+            <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon " /></div></div>
         </div>
 
         <div class="header__balance">
-            <div class="header__balance-text">$200,20</div>
+            <div class="header__balance-text h4">$200,20</div>
             <button class="header__balance-button"><img src="../assets/header/tabler--plus.png" alt="Settings"
                     class="header__add-balance" /></button>
         </div>
-        </div>
     </header>
     <main>
-        <h2 class="trending__title">TRENDING</h2>
+        <h3 class="trending__title">Trending</h3>
         <section class="trending">
             <div class="trending__content">
                 <!-- Equipo 1 y Equipo 2 con "VS" en el medio -->
@@ -48,13 +49,13 @@
 
                 <!-- Información del partido en el centro -->
                 <div class="trending__match-info">
-                    <p class="trending__teams">DATA DATA</p>
+                    <h1 class="trending__teams">DATA DATA</>
                 </div>
 
                 <!-- Botón "Bet Now" -->
-                <div>
+                <h4>
                     <button class="trending__bet-now">Bet Now</button>
-                </div>
+                </h4>
             </div>
         </section>
 
@@ -157,7 +158,9 @@
 
         <div class="footer__text-down">
             <p>Terms And Conditions</p>
-            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon"/><img src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon"/> 2023 OneGoal, Inc.</p>
+            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon" /><img
+                    src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon" /> 2023
+                OneGoal, Inc.</p>
             <div class="footer__socials">
                 <a href="https://www.tiktok.com" target="_blank">
                     <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">
@@ -173,6 +176,21 @@
                 </a>
             </div>
         </div>
+
+        <nav class="mobile-menu">
+            <a href="index.html" class="mobile-menu__link">
+                <img src="../assets/header/si--home-line.png" alt="Home" class="mobile-menu__icon mobile-menu__icon__selected" />
+            </a>
+            <a href="bets.html" class="mobile-menu__link">
+                <img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="mobile-menu__icon" />
+            </a>
+            <a href="chat.html" class="mobile-menu__link">
+                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat" class="mobile-menu__icon" />
+            </a>
+            <a href="signin.html" class="mobile-menu__link">
+                <img src="../assets/header/mingcute--user-3-line.png" alt="Avatar" class="mobile-menu__icon" />
+            </a>
+        </nav>
 
 </body>
 
