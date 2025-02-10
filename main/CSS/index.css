@@ -12,24 +12,23 @@
 }
 @font-face {
     font-family: 'BeVietnamPro';
-    src: url('../../Fonts/Be_Vietnam_Pro/Be_Vietnam_Pro.woff2') format('woff2'),
-         url('../../Fonts/Be_Vietnam_Pro/Be_Vietnam_Pro.woff') format('woff');
+    src: url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff2'),
+         url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../../Fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    src: url('../../assets/Fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-
 /* Estilos de tipografía */
 h1 {
     font-family: 'BeVietnamPro', sans-serif;
-    font-weight: 800; /* Extrabold */
+    font-weight: 800;
     font-size: 48px;
     line-height: 52px;
 }
@@ -348,8 +347,6 @@ main {
 .match__team {
     display: flex;
     align-items: center;
-    font-size: 18px;
-    font-weight: bold;
     text-align: center;
     gap: 10px;
 }
@@ -362,7 +359,6 @@ main {
 
 /* Marcador */
 .match__score {
-    font-size: 22px;
     font-weight: bold;
     text-align: center;
     display: flex;
@@ -379,7 +375,6 @@ main {
 
 /* Resultado del partido */
 .match__score_result {
-    font-size: 24px;
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 6px;
@@ -437,7 +432,6 @@ main {
     transform: scale(1.2);
 }
 .footer__text-down {
-    font-size: 14px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -686,7 +680,15 @@ main {
 }
 
 /* Media Queries para pantallas pequeñas (móviles y tabletas) */
-@media (max-width: 768px) {
+@media (width <= 768px) {
+    body {
+        display: flex;               /* Convierte el body en un contenedor flex */
+        flex-direction: column;      /* Asegura que los elementos se alineen en una columna */
+        justify-content: center;     /* Centra el contenido verticalmente */
+        align-items: center;         /* Centra el contenido horizontalmente */
+        height: 100vh;                /* Asegura que el body ocupe toda la altura de la ventana */
+        margin: 0;                    /* Elimina márgenes por defecto */
+    }
     .header__icon_desktop {
         display: none; /* Oculta el header en pantallas móviles */
     }
