@@ -37,71 +37,86 @@
     <main>
 
         <section class="profile">
-            <h2 class="profile__title">My Profile</h2>
-        
+            <h3 class="profile__title">My Profile</h3>
+
             <div class="profile__header">
                 <img src="../assets/img/ej3.jpg" alt="Profile Picture" class="profile__image">
                 <button class="profile__status" aria-label="Notifications">
                     <img src="../assets/header/akar-icons--bell.png" alt="Notifications" class="profile__status-icon">
                 </button>
-                
+
             </div>
-        
+
             <div class="profile__stats">
                 <button class="profile__stat">
                     <a href="#" class="profile__stat-link">
-                        <span class="profile__stat-label">Followers</span>
-                        <span class="profile__stat-value">106</span>
+                        <span class="profile__stat-label small">Followers</span>
+                        <h4 class="profile__stat-value">106</h4>
                     </a>
                 </button>
                 <button class="profile__stat">
                     <a href="#" class="profile__stat-link">
-                        <span class="profile__stat-label">Following</span>
-                        <span class="profile__stat-value">106</span>
+                        <span class="profile__stat-label small">Following</span>
+                        <h4 class="profile__stat-value">106</h4>
                     </a>
                 </button>
             </div>
-            
+
             <div class="profile__about">
-                <h3 class="profile__about-title">ABOUT ME</h3>
+                <h4 class="profile__about-title">ABOUT ME</h4>
                 <p class="profile__about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident.
                 </p>
-                <button class="profile__button profile__button--edit">Editar perfil</button>
+                <button class="profile__button profile__button--edit">
+                    <p>Editar perfil</p>
+                </button>
             </div>
-        
+
             <section class="profile__history">
-                <h3 class="profile__history-title">History</h3>
+                <h4 class="profile__history-title">History</h4>
                 <div class="profile__history-grid">
                     <div class="profile__history-card">
-                        <h4 class="profile__history-card-title">Hits</h4>
-                        <p><a href="#" target="_blank" class="profile__history-card-subtitle"> See more</a></p>
-                        <span class="profile__history-card-value">34%</span>
+                        <div class="top">
+                            <p class="profile__history-card-title">Hits</p>
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                                    more</a></p>
+                        </div>
+                        <p class="profile__history-card-value top">34%</p> <!-- Porcentaje de la parte superior -->
+
+                        <div class="bottom">
+                            <p class="profile__history-card-title">Near Hits</p>
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                                    more</a></p>
+                        </div>
+                        <p class="profile__history-card-value bottom">42%</p> <!-- Porcentaje de la parte inferior -->
                     </div>
+
                     <div class="profile__history-card">
-                        <h4 class="profile__history-card-title">Near Hits</h4>
-                        <p><a href="#" target="_blank" class="profile__history-card-subtitle">See more</a></p>
-                        <span class="profile__history-card-value">42%</span>
-                    </div>
-                    <div class="profile__history-card">
-                        <h4 class="profile__history-card-title">Near Misses</h4>
-                        <p ><a href="#" target="_blank" class="profile__history-card-subtitle">See more</a></p>
-                        <span class="profile__history-card-value">8%</span>
-                    </div>
-                    <div class="profile__history-card">
-                        <h4 class="profile__history-card-title">Misses</h4>
-                        <p><a href="#" target="_blank" class="profile__history-card-subtitle">See more</a></p>
-                        <span class="profile__history-card-value">16%</span>
+                        <div class="top">
+                            <p class="profile__history-card-title">Near Misses</p>
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                                    more</a></p>
+                        </div>
+                        <p class="profile__history-card-value top">8%</p> <!-- Porcentaje de la parte superior -->
+
+                        <div class="bottom">
+                            <p class="profile__history-card-title">Misses</p>
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                                    more</a></p>
+                        </div>
+                        <p class="profile__history-card-value bottom">16%</p> <!-- Porcentaje de la parte inferior -->
                     </div>
                 </div>
+
             </section>
         </section>
-        
 
 
-        </main>
-    
+
+    </main>
+
     <footer class="footer">
         <div class="footer__payments">
             <a href="https://www.visa.com" target="_blank">
@@ -120,7 +135,9 @@
 
         <div class="footer__text-down">
             <p>Terms And Conditions</p>
-            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon"/><img src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon"/> 2023 OneGoal, Inc.</p>
+            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon" /><img
+                    src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon" /> 2023
+                OneGoal, Inc.</p>
             <div class="footer__socials">
                 <a href="https://www.tiktok.com" target="_blank">
                     <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">

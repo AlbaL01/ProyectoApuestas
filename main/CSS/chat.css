@@ -10,7 +10,81 @@
     --black: #202322;
     --orange: #DE7C0B;
 }
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff2'),
+         url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/Fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos de tipografía */
+h1 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 52px;
+}
+
+h2 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 800; /* Extrabold */
+    font-size: 22px;
+    line-height: 52px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 22px;
+    line-height: 48px;
+    text-align: left;
+}
+
+h4 {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 20px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.extra-small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.caption {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -166,6 +240,7 @@ main {
     border: 2px solid var(--green2);
     display: flex;
     flex-direction: column;
+    height:80%;
 }
 
 .chat__header {
@@ -322,7 +397,6 @@ main {
     padding: 20px;
     background-color: var(--white);
     color: var(--gray1);
-    margin-top: 20px;
 }
 
 .footer__payment-icon {
