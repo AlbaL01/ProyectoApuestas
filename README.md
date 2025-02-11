@@ -16,7 +16,7 @@ Diseño de página web para la marca OneGoal. Es una plataforma web innovadora d
 - **GitHub**: Repositorio para almacenar el código fuente del proyecto.
 - **HTML5**: Para la estructura semántica de la página.
 - **CSS3**: Con Flexbox, CSS Grid y Media Queries para que la página web sea responsive.
-- **JavaScript**: Para la interactividad y la validación de formularios.
+- **JavaScript**: Para la interactividad y la validación de formularios. (PRÓXIMAMENTE)
 
 ## Instrucciones de Instalación y Uso
 
