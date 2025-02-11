@@ -360,11 +360,10 @@ main {
     transition: background 0.3s;
 }
 
-
 /* Estilos para el menú móvil */
 .mobile-menu {
     position: fixed;
-    bottom: 30px; 
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -375,7 +374,8 @@ main {
     border-radius: 25px;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
     width: 80%;
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
 }
 
 .mobile-menu__link {
@@ -390,14 +390,17 @@ main {
     object-fit: contain;
     font-size: 24px;
     background-color: var(--black);
-    width: 25px;
-    height: 25px;
+    width: 40px; /* Aumenta el tamaño del icono */
+    height: 40px;
+    padding: 10px; /* Ajusta el padding para que el icono quede bien dentro del círculo */
     display: flex;
-    padding: 5px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+
     /* border: 2px solid var(--green2); */
+
+
     transition: background 0.3s;
 }
 
@@ -405,13 +408,22 @@ main {
 .mobile-menu__icon__selected {
     background-color: var(--green2);
     border: 2px solid var(--green2);
+    width: 45px; 
+    height: 45px;
+    padding: 8px;
 }
 
+.mobile-menu__icon, .mobile-menu__icon__selected {
+    box-sizing:content-box;
+    border-radius: 50%;
+}
 /* Estilo hover de los iconos */
-.mobile-menu__icon:hover, .mobile-menu__icon__selected:hover {
+.mobile-menu__icon:hover,
+.mobile-menu__icon__selected:hover {
     background-color: var(--green1);
     color: var(--white);
 }
+
 
 /* Estilos generales para dispositivos pequeños y tabletas */
 @media (max-width: 768px) {
@@ -470,15 +482,24 @@ main {
         min-height: 100vh;
       }
 
-    /* Ajustes para el menú móvil */
+    /* Menu móvil */
     .mobile-menu {
-        display: flex;
+        width: 70%;
+        display: flex !important;
+        /* Asegura que se muestre */
+        bottom: 20px;
+        padding: 10px 0;
     }
 
     .mobile-menu__icon {
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+    }
+
+    .mobile-menu__icon__selected {
+        width: 35px;
+        height: 35px;
     }
 
     .footer__text-down {
@@ -528,17 +549,23 @@ main {
         height: 28px;
     }
 
-    /* Ajustes para el menú móvil */
+    /* Menu móvil */
     .mobile-menu {
-        display: flex;
+        width: 70%;
+        bottom: 20px;
+        padding: 12px 0;
     }
 
     .mobile-menu__icon {
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
+        padding: 10px;
     }
 
+    .mobile-menu__icon__selected {
+        width: 40px;
+        height: 40px;
+    }
     .footer__text-down {
         flex-direction: row;
         gap: 20px;

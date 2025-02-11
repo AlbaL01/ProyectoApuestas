@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneGoal Betting</title>
+    <title>OneGoal Chat</title>
     <link rel="stylesheet" href="./CSS/chat.css">
-        <link rel="icon" type="image/png" href="../assets/OneGoalLogos/logonegro.png">
+    <link rel="icon" type="image/png" href="../assets/OneGoalLogos/logonegro.png">
 </head>
 
 <body>
@@ -16,24 +16,26 @@
         </div>
 
         <div class="header__icons">
-
-            <a href="index.html"><img src="../assets/header/si--home-line.png" alt="Home" class="header__icon" /></a>
+            <a href="index.html"><img src="../assets/header/si--home-line.png" alt="Home"
+                    class="header__icon header__icon_desktop" /></a>
+            <!-- hay que añadir el header__icon_desktop para que pueda cogerlo -->
             <a href="bets.html"><img src="../assets/header/ph--soccer-ball.png" alt="Ball"
-                    class="header__icon" /></a>
+                    class="header__icon header__icon_desktop" /></a>
             <a href="chat.html"><img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat"
-                    class="header__icon__selected" /></a>
+                    class="header__icon__selected header__icon_desktop" /></a>
             <a href="personal.html"><img src="../assets/header/mingcute--user-3-line.png" alt="Avatar"
-                    class="header__icon" /></a>
-            <div><img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon" /></div>
-            <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon" /></div>
-
+                    class="header__icon header__icon_desktop" /></a>
+            <div class="header__icon_mobile">
+                <div><img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon" /></div>
+                <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon " />
+                </div>
+            </div>
         </div>
 
         <div class="header__balance">
-            <div class="header__balance-text">$200,20</div>
+            <div class="header__balance-text h4">$200,20</div>
             <button class="header__balance-button"><img src="../assets/header/tabler--plus.png" alt="Settings"
                     class="header__add-balance" /></button>
-        </div>
         </div>
     </header>
     <div class="container">
@@ -75,7 +77,7 @@
                     <div class="message-item">
                         <p class="small">Lorem ipsum dolor sit amet consectetur</p>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
         <!-- Chat Window -->
@@ -85,14 +87,25 @@
                 <img src="../assets/img/ej1.jpg" alt="User" class="user__img">
                 <span class="small">Data</span>
                 <div class="chat__options">
-                    <button class="icon__header"><img src="../assets/chat/streamline--webcam-video.png" alt="icons"></button>
+                    <button class="icon__header"><img src="../assets/chat/streamline--webcam-video.png"
+                            alt="icons"></button>
                     <button class="icon__header"><img src="../assets/chat/mynaui--telephone.png" alt="icons"></button>
                     <button class="icon__header"><img src="../assets/chat/mage--dots.png" alt="icons"></button>
                 </div>
             </div>
-            
+
             <!-- Messages -->
             <div class="chat__messages">
+                <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message sent small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message sent small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message sent small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message sent small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                <div class="message sent small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
                 <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
                 <div class="message sent small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
                 <div class="message received small">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
@@ -107,12 +120,29 @@
                 <button class="icon__footer"><img src="../assets/chat/codex--file.png" alt="icons"></button>
                 <input type="text" class="small" placeholder="Escribe un mensaje ">
                 <div class="chat__option">
-                    <button class="icon__footer"><img src="../assets/chat/iconamoon--microphone-light.png" alt="icons"></button>
+                    <button class="icon__footer"><img src="../assets/chat/iconamoon--microphone-light.png"
+                            alt="icons"></button>
                 </div>
             </div>
 
         </div>
     </div>
+    <nav class="mobile-menu">
+        <a href="index.html" class="mobile-menu__link">
+            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
+        </a>
+        <a href="bets.html" class="mobile-menu__link">
+            <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon" />
+        </a>
+        <a href="chat.html" class="mobile-menu__link">
+            <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat"
+                class="mobile-menu__icon__selected" />
+        </a>
+        <a href="personal.html" class="mobile-menu__link">
+            <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon" />
+        </a>
+    </nav>
+
     <footer class="footer">
         <div class="footer__payments">
             <a href="https://www.visa.com" target="_blank">
@@ -151,5 +181,44 @@
         </div>
     </footer>
 </body>
+<script>
+    // Para seleccionar los elementos
+    const messageContainers = document.querySelectorAll('.message-container');
+    const chatWindow = document.querySelector('.chat__window');
+    const chatHeaderImg = document.querySelector('.chat__header .user__img');
+
+    // Para verificar que el ancho de pantalla sea el de mediaquery
+    function isMobileOrTablet() {
+        return window.matchMedia('(max-width: 1224px)').matches;
+    }
+
+    // Función para manejar el clic en los mensajes
+    function handleMessageClick(event) {
+        if (isMobileOrTablet()) {
+            chatWindow.style.display = 'flex';  // el chat en móviles o tabletas
+        } else {
+            chatWindow.style.display = 'block';  // el chat en escritorio sin pantalla completa
+        }
+
+        // Cambiar la imagen del chat a la del mensaje seleccionado  (y también se cargarían sus mensajes)
+        const userImage = event.target.closest('.message-container').querySelector('img'); 
+        if (userImage) {
+            chatHeaderImg.src = userImage.src;
+        }
+    }
+    // Para cuando se pulse el mensaje
+    messageContainers.forEach(container => {
+        container.addEventListener('click', handleMessageClick);
+    });
+
+    // Para manejar cambios de tamaño de pantalla
+    window.addEventListener('resize', () => {
+        if (!isMobileOrTablet()) {
+            chatWindow.style.display = 'none';  // Ocultar el chat si la pantalla es + grande
+        }
+    });
+
+</script>
+
 
 </html>
