@@ -397,7 +397,7 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid var(--green2);
+    /* border: 2px solid var(--green2); */
     transition: background 0.3s;
 }
 
