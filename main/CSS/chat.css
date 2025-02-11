@@ -213,10 +213,14 @@ main {
 /* Layout principal */
 .container {
     display: flex;
-    height: 100vh;
-    padding: 20px;
     gap: 20px;
+    padding: 0 20px;
+    height: calc(100vh - 80px); /* Restando la altura del header */
+    margin: 0 auto;
+    justify-content: flex-start;
+    margin-top: 80px; /* Añadir espacio encima del contenedor para no solaparse con el header */
 }
+
 
 /* Sidebar */
 .sidebar {
@@ -241,7 +245,8 @@ main {
 .message-container img {
     width: 50px;
     height: 50px;
-    border-radius: 35%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .message-item {
@@ -256,6 +261,7 @@ main {
 
 /* Chat */
 .chat__window {
+    margin-top:4rem;
     flex: 2;
     padding: 20px;
     border-radius: 15px;
@@ -263,7 +269,9 @@ main {
     border: 2px solid var(--green2);
     display: flex;
     flex-direction: column;
-    height: 80%;
+    overflow-y: auto;  /* Añadir scroll si el contenido es muy largo */
+    height: 80%; /* Asegura que ocupe el 100% de la altura del contenedor */
+    position: relative;
 }
 
 .chat__header {
@@ -273,20 +281,32 @@ main {
     border-radius: 15px;
     border: 2px solid var(--green2);
     font-weight: bold;
+    box-sizing: border-box;
+    z-index: 10;
+    position: sticky; /* Hace que el header se quede pegado */
+    top: 0; /* Se pegará en la parte superior del contenedor cuando haga scroll */
+    width: 100%; /* Asegura que el header ocupe todo el ancho del contenedor */
 }
 
 .chat__header img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .user__img {
     padding: 5px;
     padding-left: 25px;
     padding-right: 25px;
+    object-fit: cover;
 }
-
+.chat__header .user__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
 .chat__options {
     display: flex;
     align-items: center;
@@ -360,6 +380,7 @@ main {
     border: 3px solid var(--green3);
 }
 
+/* Asegura que el footer esté siempre en la parte inferior */
 .chat__footer {
     display: flex;
     align-items: center;
@@ -370,7 +391,13 @@ main {
     background-color: var(--white);
     border-radius: 15px;
     border: 2px solid var(--green2);
+    position: sticky; /*Para que el footer se quede pegado al fondo del chat */
+    bottom: 0; 
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
 }
+
 
 .chat__footer input {
     flex: 1;
@@ -414,12 +441,20 @@ main {
 
 /* Footer */
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    padding: 5rem 15px;
     background-color: var(--white);
     color: var(--gray1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    margin-top:3rem;
+}
+.footer__payments {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .footer__payment-icon {
@@ -432,11 +467,6 @@ main {
     transform: scale(1.2);
 }
 
-.footer__payments {
-    display: flex;
-    gap: 50px;
-    margin-bottom: 15px;
-}
 
 .footer__socials {
     display: inline-flex;
@@ -512,9 +542,9 @@ main {
     object-fit: contain;
     font-size: 24px;
     background-color: var(--black);
-    width: 40px; /* Aumenta el tamaño del icono */
+    width: 40px;
     height: 40px;
-    padding: 10px; /* Ajusta el padding para que el icono quede bien dentro del círculo */
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -542,7 +572,6 @@ main {
     color: var(--white);
 }
 
-
 /* Media Queries para pantallas de tabletas y dispositivos medianos */
 @media (min-width: 768px) and (max-width: 1224px) {
     .header__icon_desktop {
@@ -551,12 +580,12 @@ main {
 
     .header__icon_mobile {
         display: flex;
-        /* Oculta los íconos móviles en tabletas */
+        /* Muestra los íconos móviles en tabletas */
     }
 
     .mobile-menu {
         display: flex;
-        /* Oculta el menú móvil en tabletas */
+        /* Muestra el menú móvil en tabletas */
     }
 
     .header__icons {
@@ -630,21 +659,18 @@ main {
     .container {
         display: flex;
         flex-direction: column;
-        /* Cambiar la dirección para centrar el contenido */
         align-items: center;
-        /* Centrar el sidebar */
         justify-content: center;
     }
 
     .sidebar {
         width: 80%;
-        /* Reducir el tamaño del sidebar para que se vea bien centrado */
         margin: 0 auto;
-        /* Centrar el sidebar horizontalmente */
     }
 }
 
-@media (width <=768px) {
+/* Media Queries para pantallas pequeñas, como móviles */
+@media (max-width: 768px) {
     body {
         display: flex;
         flex-direction: column;
@@ -666,14 +692,12 @@ main {
 
     .mobile-menu {
         width: 100%;
-        /* O ajusta a algo más pequeño si es necesario */
         display: flex;
         padding: 10px 0;
     }
 
     .header__logo-img {
         height: 40px;
-        /* Reduce el tamaño del logo */
         margin-left: 0;
     }
 
@@ -723,7 +747,6 @@ main {
     .mobile-menu {
         width: 70%;
         display: flex !important;
-        /* Asegura que se muestre */
         bottom: 20px;
         padding: 10px 0;
     }
@@ -741,24 +764,25 @@ main {
 
     /* Ocultar el chat */
     .chat__window {
-        display: none;
+        display: block;
+        min-height: 300px;
+        height: 100%;
+        width: auto;
+        padding: 10px; 
+        box-sizing: border-box;
     }
 
     /* Centrar el sidebar */
     .container {
         display: flex;
         flex-direction: column;
-        /* Cambiar la dirección para centrar el contenido */
         align-items: center;
-        /* Centrar el sidebar */
         justify-content: center;
     }
 
     .sidebar {
         width: 90%;
-        /* Ajustar el tamaño para pantallas pequeñas */
         margin: 0 auto;
-        /* Centrar el sidebar horizontalmente */
     }
 
 }
