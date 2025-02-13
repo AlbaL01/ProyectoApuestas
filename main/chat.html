@@ -182,41 +182,63 @@
     </footer>
 </body>
 <script>
-    // Para seleccionar los elementos
-    const messageContainers = document.querySelectorAll('.message-container');
+   document.addEventListener('DOMContentLoaded', () => {
     const chatWindow = document.querySelector('.chat__window');
     const chatHeaderImg = document.querySelector('.chat__header .user__img');
+    const messagesContainer = document.querySelector('.messages-container');
+    const messageContainers = document.querySelectorAll('.message-container');
 
-    // Para verificar que el ancho de pantalla sea el de mediaquery
     function isMobileOrTablet() {
         return window.matchMedia('(max-width: 1224px)').matches;
     }
 
-    // Función para manejar el clic en los mensajes
     function handleMessageClick(event) {
         if (isMobileOrTablet()) {
-            chatWindow.style.display = 'flex';  // el chat en móviles o tabletas
+            chatWindow.style.display = 'flex';
+            chatWindow.style.bottom = '0';
         } else {
-            chatWindow.style.display = 'block';  // el chat en escritorio sin pantalla completa
+            chatWindow.style.display = 'block';
         }
 
-        // Cambiar la imagen del chat a la del mensaje seleccionado  (y también se cargarían sus mensajes)
+        // Cambiar la imagen del chat (si hubiera chats almacenados se podría cambiar parecido)
         const userImage = event.target.closest('.message-container').querySelector('img'); 
         if (userImage) {
             chatHeaderImg.src = userImage.src;
         }
+
+        // Hacer scroll hacia abajo después de abrir el chat
+        scrollToBottom();
     }
-    // Para cuando se pulse el mensaje
+
+    function scrollToBottom() {
+        setTimeout(() => {
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }, 200);
+    }
+
     messageContainers.forEach(container => {
         container.addEventListener('click', handleMessageClick);
     });
 
-    // Para manejar cambios de tamaño de pantalla
+    // Manejo de resize para detectar teclado en móviles
     window.addEventListener('resize', () => {
-        if (!isMobileOrTablet()) {
-            chatWindow.style.display = 'none';  // Ocultar el chat si la pantalla es + grande
+        if (window.innerHeight < 500) {
+            messagesContainer.style.maxHeight = '50vh';
+            chatWindow.style.bottom = 'auto';
+        } else {
+            messagesContainer.style.maxHeight = '75vh';
+            chatWindow.style.bottom = '0';
         }
     });
+
+    // Ocultar chat en escritorio al redimensionar
+    window.addEventListener('resize', () => {
+        if (!isMobileOrTablet()) {
+            chatWindow.style.display = 'none';
+        }
+    });
+});
+
 
 </script>
 
