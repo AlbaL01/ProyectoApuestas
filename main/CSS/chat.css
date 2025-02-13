@@ -257,7 +257,7 @@ main {
     align-items: center;
     gap: 12px;
     margin-bottom: 15px;
-
+    cursor: pointer;
 }
 
 .message-container img {
