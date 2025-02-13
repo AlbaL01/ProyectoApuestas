@@ -638,7 +638,6 @@ main {
 
 /* Estilos generales para dispositivos pequeños y tabletas */
 @media (max-width: 768px) {
-
     .header__icon_desktop {
         display: none !important;
     }
@@ -648,13 +647,13 @@ main {
         margin-right: 20px;
     }
     .mobile-menu {
-        width: 100%;
+        width: 100%; /* O ajusta a algo más pequeño si es necesario */
         display: flex;
         padding: 10px 0;
-    }
+      }
       
     .header__logo-img {
-        height: 40px;
+        height: 40px; /* Reduce el tamaño del logo */
         margin-left: 0;
     }
 
@@ -679,6 +678,7 @@ main {
         font-size: 18px;
     }
 
+
     /* Main Content */
     main {
         padding: 15px;
@@ -692,6 +692,9 @@ main {
         align-items: center;
         margin: 0;
         min-height: 100vh;
+        justify-items: center;
+        width:50%;
+        margin-left: 8rem;
       }
 
     /* Sección de Hits */
