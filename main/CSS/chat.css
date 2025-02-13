@@ -678,7 +678,7 @@ main {
 
     /* Ocultar el chat */
     .chat__window {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         width: 90%;
@@ -808,7 +808,7 @@ main {
     }
 
     .chat__window {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: fixed;
         width: 90%;
