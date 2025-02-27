@@ -192,11 +192,13 @@ body {
     border-radius: 50%;
     cursor: pointer;
     color: var(--black);
+    transition: all 0.3s ease;
 }
 
 .header__add-balance:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.10);
 }
 
 /* Main */
@@ -240,9 +242,15 @@ main {
     text-align: center;
     color: var(--gray1);
     font-weight: bold;
+    transition: transform 0.3s ease;
 }
-
-
+.tab:hover{
+    color: var(--white);
+    transform: scale(1.05);
+}
+.tab_active:hover{
+    transform: scale(1.05);
+}
 .tab a {
     text-decoration: none; 
     color: inherit; 
@@ -255,8 +263,8 @@ main {
     background: var(--white);
     font-weight: bold;
     border-radius: 10px;
+    
 }
-
 /* Matches section */
 .matches {
     text-align: left;
