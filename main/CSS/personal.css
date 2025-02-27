@@ -131,6 +131,7 @@ main {
 .header__icon__selected:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.1);
 }
 
 .rotate-on-hover{
@@ -519,6 +520,7 @@ main {
 .mobile-menu__icon, .mobile-menu__icon__selected {
     box-sizing:content-box;
     border-radius: 50%;
+    transform: scale(1.1);
 }
 /* Estilo hover de los iconos */
 .mobile-menu__icon:hover,
