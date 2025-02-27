@@ -10,9 +10,11 @@
 
 </head>
 
-<body>
+<body> 
+    <div id="spinner" class="spinner"></div>
+   
     <!-- Header para pantallas grandes -->
-    <header class="header">
+    <header class="header fade-in">
         <div class="header__logo">
             <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
         </div>
@@ -36,7 +38,7 @@
                     class="header__add-balance" /></button>
         </div>
     </header>
-    <main>
+    <main class="fade-in">
         <h3 class="trending__title">Trending</h3>
         <section class="trending">
             <div class="trending__content">
@@ -138,7 +140,7 @@
         </section>
     </main>
     
-    <nav class="mobile-menu">
+    <nav class="mobile-menu fade-in">
         <a href="index.html" class="mobile-menu__link">
             <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon__selected" />
         </a>
@@ -152,7 +154,7 @@
             <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon" />
         </a>
     </nav>
-    <footer class="footer">
+    <footer class="footer fade-in">
         <div class="footer__payments">
             <a href="https://www.visa.com" target="_blank">
                 <img src="../assets/footer/visa.png" alt="Visa" class="footer__payment-icon">
@@ -191,5 +193,15 @@
 
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeInElements = document.querySelectorAll('.fade-in');
 
+        window.addEventListener('load', function() {
+            fadeInElements.forEach(element => {
+                element.classList.add('visible');
+            });
+        });
+    });
+</script>
 </html>

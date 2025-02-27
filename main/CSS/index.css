@@ -25,6 +25,15 @@
     font-style: normal;
 }
 
+/* Animación de fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
 /* Estilos de tipografía */
 h1 {
     font-family: 'BeVietnamPro', sans-serif;
