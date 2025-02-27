@@ -204,11 +204,13 @@ main {
     border-radius: 50%;
     cursor: pointer;
     color: var(--black);
+    transition: all 0.3s ease;
 }
 
 .header__add-balance:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.10);
 }
 
 /* Layout principal */
@@ -352,6 +354,7 @@ main {
     border-radius: 50%;
     background: var(--white);
     flex: none;
+    transition: transform 0.3s ease;
 }
 
 .icon__header:hover {
@@ -445,7 +448,7 @@ main {
     border: none;
     border-radius: 50%;
     background: var(--white);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 

@@ -193,13 +193,14 @@ main {
     border-radius: 50%;
     cursor: pointer;
     color: var(--black);
+    transition: all 0.3s ease;
 }
 
 .header__add-balance:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.10);
 }
-
 
 .trending__title{
     text-align: left;
@@ -278,11 +279,13 @@ main {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     transition: background 0.3s, transform 0.2s;
     font: inherit;
+    transition: all 0.3s ease;
 }
 
 .trending__bet-now:hover {
     background-color: var(--green1);
-    transform: scale(1.1);
+    transform: scale(1.05);
+    
 }
 
 /* Leagues */
@@ -405,7 +408,7 @@ main {
 }
 
 .footer__payment-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .footer__payments {

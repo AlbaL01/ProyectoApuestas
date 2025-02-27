@@ -161,13 +161,14 @@ main {
     border-radius: 50%;
     cursor: pointer;
     color: var(--black);
+    transition: all 0.3s ease;
 }
 
 .header__add-balance:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.10);
 }
-
 /* Bloque principal */
 .profile {
     text-align: center;
@@ -218,7 +219,7 @@ main {
     align-items: center;
     border-radius: 50%;
     border: 2px solid var(--green2);
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .profile__status:hover .profile__status-icon {
@@ -341,9 +342,13 @@ main {
 .profile__history-card-subtitle {
     font-size: 12px;
     color: var(--gray1);
-    text-decoration: none;
+    text-decoration: none;    
+    transition: transform 0.3s ease;
 }
-
+.profile__history-card-subtitle:hover{
+    transform: scale(1.05);
+    color:var(--black);
+}
 /* Para la parte superior de cada tarjeta (title + see more) */
 .profile__history-card>.top {
     display: flex;
