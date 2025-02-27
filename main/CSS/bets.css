@@ -155,6 +155,7 @@ body {
 .header__icon:hover, .header__icon__selected:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.1);
 }
 
 .rotate-on-hover{
@@ -448,6 +449,7 @@ main {
 .mobile-menu__icon__selected:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.1);
 }
 
 
