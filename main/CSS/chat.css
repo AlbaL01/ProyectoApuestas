@@ -202,6 +202,7 @@ main {
 .header__balance-button {
     border: none;
     background-color: var(--white);
+    border-radius: 20px;
 }
 
 .header__add-balance {
