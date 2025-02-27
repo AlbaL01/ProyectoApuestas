@@ -157,6 +157,15 @@ body {
     color: var(--white);
 }
 
+.rotate-on-hover{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.rotate-on-hover:hover {
+    transform: rotate(360deg);
+}
+
 .header__balance {
     display: flex;
     align-items: center;
@@ -274,6 +283,12 @@ main {
     background-color: var(--white);
     margin: 10px 0;
     border: 4px solid var(--green1);
+    transition: transform 0.3s ease;
+}
+
+.match:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--white);
 }
 
 .team {
