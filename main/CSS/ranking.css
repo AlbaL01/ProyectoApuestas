@@ -156,6 +156,15 @@ p {
     color: var(--white);
 }
 
+.rotate-on-hover{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.rotate-on-hover:hover {
+    transform: rotate(360deg);
+}
+
 .header__balance {
     display: flex;
     align-items: center;
