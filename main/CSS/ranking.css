@@ -182,7 +182,7 @@ p {
 .header__balance-button{
     border: none;
     background-color: var(--white);
-    border-radius: 20px;
+    border-radius: 50%;
 }
 .header__add-balance {
     background-color: var(--green2);
