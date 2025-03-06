@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/OneGoalLogos/logonegro.png">
+    <title>Bubble</title>
+
+    <link rel="stylesheet" href="./CSS/index.css"> <!-- El CSS de index.css para que pueda reutilizar header y el footer-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+
+    <script>
+        window.addEventListener("load", () => {
+            let audioData = 0;
+            let active = false;
+
+            const bubbleContainer = document.querySelector('.bubble-container');
+            const purpleSphere = document.createElement('div');
+            purpleSphere.classList.add('purple-sphere', 'absolute', 'rounded-full', 'bg-pink-300', 'opacity-50', 'pointer-events-none');
+            purpleSphere.style.width = '9rem';
+            purpleSphere.style.height = '9rem';
+            bubbleContainer.appendChild(purpleSphere);
+
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            let analyser, microphone, dataArray;
+
+            async function setupMicrophone() {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    microphone = audioContext.createMediaStreamSource(stream);
+                    analyser = audioContext.createAnalyser();
+                    analyser.fftSize = 256;
+                    dataArray = new Uint8Array(analyser.frequencyBinCount);
+                    microphone.connect(analyser);
+
+                    //Para actualizar a intervalos
+                    setInterval(() => {
+                        analyser.getByteFrequencyData(dataArray);
+                        const volume = dataArray.reduce((a, b) => a + b) / dataArray.length;
+                        audioData = volume;
+                        active = volume > 50; // Ajustar el VOLUMEN
+
+                        updateAnimations();
+                    }, 10);
+                } catch (err) {
+                    console.error('Error al acceder al micrófono:', err);
+                }
+            }
+
+            function updateAnimations() {
+                const scaleSize = Math.max(1.4, audioData / 100);
+                const pulseSpeed = Math.max(0.1, audioData / 100);
+
+                if (active) {
+                    gsap.to(bubbleContainer, {
+                        scale: scaleSize,
+                        duration: pulseSpeed,
+                        ease: 'easeInOut',
+                        repeat: -1,
+                        yoyo: true
+                    });
+                } else {
+                    gsap.to(bubbleContainer, {
+                        scale: 1,
+                        duration: 1,
+                        ease: 'easeInOut',
+                    });
+                }
+
+                if (active) {
+                    const maxOffset = 90;
+                    // Movimiento suave en X e Y usando funciones senoidales
+                    const targetX = Math.sin(Date.now() / 1000) * maxOffset; //eje X
+                    const targetY = Math.cos(Date.now() / 1000) * maxOffset; //eje Y
+
+                    const slowDuration = Math.max(6, audioData / 50);
+
+                    gsap.to(purpleSphere, {
+                        x: targetX, // Desplazamiento en X
+                        y: targetY, // Desplazamiento en Y
+                        duration: slowDuration,
+                        ease: 'power1.out',
+                        repeat: -1,
+                        yoyo: true,
+                    });
+                } else {
+                    gsap.to(purpleSphere, {
+                        x: 0,
+                        y: 0,
+                        duration: 1,
+                        ease: 'power1.inOut',
+                    });
+                }
+            }
+
+            setupMicrophone();
+        });
+    </script>
+</head>
+
+<body class=" m-0 p-0 box-border font-sans bg-white text-black  justify-center bg-gray-100">
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
+        </div>
+
+        <div class="header__icons">
+            <a href="index.html"><img src="../assets/header/si--home-line.png" alt="Home"
+                    class="header__icon header__icon_desktop" /></a>
+            <!-- hay que añadir el header__icon_desktop para que pueda cogerlo -->
+            <a href="bets.html"><img src="../assets/header/ph--soccer-ball.png" alt="Ball"
+                    class="header__icon header__icon_desktop" /></a>
+            <a href="chat.html"><img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat"
+                    class="header__icon header__icon_desktop" /></a>
+            <a href="personal.html"><img src="../assets/header/mingcute--user-3-line.png" alt="Avatar"
+                    class="header__icon header__icon_desktop" /></a>
+            <div class="header__icon_mobile">
+                <div> <a href="bubble.html"><img src="../assets/header/ia.png" alt="Bubble AI"
+                            class="header__icon__selected rotate-on-hover" /></a></div>
+                <div><img src="../assets/header/ri--search-line.png" alt="Search"
+                        class="header__icon rotate-on-hover" /></div>
+                <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings"
+                        class="header__icon rotate-on-hover" />
+                </div>
+            </div>
+        </div>
+
+        <div class="header__balance">
+            <div class="header__balance-text h4">$200,20</div>
+            <button class="header__balance-button rotate-on-hover"><img src="../assets/header/tabler--plus.png"
+                    alt="Settings" class="header__add-balance" /></button>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center mt-10">
+        <div class="bubble-container relative w-[300px] h-[300px] flex items-center justify-center rounded-full bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 shadow-lg mb-[80px] backdrop-blur-lg border-4 border-white/50 
+        shadow-[0_0_20px_10px_#ffeb3b]">
+        </div>
+
+        <div class="card-container grid grid-cols-1 gap-5 max-w-4xl p-5 sm:grid-cols-3">
+            <div
+                class="card bg-white p-5 rounded-lg shadow-lg text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.7)] cursor-pointer">
+                <h3 class="card-title text-lg font-bold mb-1">Tendencias</h3>
+                <p class="card-text text-sm text-gray-500">Análisis de las tendencias del momento.</p>
+            </div>
+
+            <div
+                class="card bg-white p-5 rounded-lg shadow-lg text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.7)] cursor-pointer">
+                <h3 class="card-title text-lg font-bold mb-1">Historial</h3>
+                <p class="card-text text-sm text-gray-500">Consulta tu historial de apuestas.</p>
+            </div>
+
+            <div
+                class="card bg-white p-5 rounded-lg shadow-lg text-center transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.7)] cursor-pointer">
+                <h3 class="card-title text-lg font-bold mb-1">Preferencias</h3>
+                <p class="card-text text-sm text-gray-500">Personalízame a tu gusto.</p>
+            </div>
+        </div>
+    </main>
+
+    <nav class="mobile-menu">
+        <a href="index.html" class="mobile-menu__link">
+            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
+        </a>
+        <a href="bets.html" class="mobile-menu__link">
+            <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon" />
+        </a>
+        <a href="chat.html" class="mobile-menu__link">
+            <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat" class="mobile-menu__icon" />
+        </a>
+        <a href="signin.html" class="mobile-menu__link">
+            <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon" />
+        </a>
+    </nav>
+    <footer class="footer">
+        <div class="footer__payments">
+            <a href="https://www.visa.com" target="_blank">
+                <img src="../assets/footer/visa.png" alt="Visa" class="footer__payment-icon">
+            </a>
+            <a href="https://www.paypal.com/es/signin" target="_blank">
+                <img src="../assets/footer/paypal.png" alt="PayPal" class="footer__payment-icon">
+            </a>
+            <a href="https://www.apple.com/apple-pay/" target="_blank">
+                <img src="../assets/footer/applepay.png" alt="Apple Pay" class="footer__payment-icon">
+            </a>
+            <a href="https://www.mastercard.com" target="_blank">
+                <img src="../assets/footer/mastercard.png" alt="MasterCard" class="footer__payment-icon">
+            </a>
+        </div>
+
+        <div class="footer__text-down">
+            <p>Terms And Conditions</p>
+            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon" /><img
+                    src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon" /> 2023
+                OneGoal, Inc.</p>
+            <div class="footer__socials">
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../assets/footer/facebook.png" alt="Facebook" class="footer__socials-icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../assets/footer/instagram.png" alt="Instagram" class="footer__socials-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../assets/footer/twitter.png" alt="Twitter" class="footer__socials-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

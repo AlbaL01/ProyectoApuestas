@@ -158,7 +158,8 @@ main {
 
 .header__balance-button {
     border: none;
-    background-color: var(--white);
+    background-color: var(--white);    
+    border-radius: 50%;
 }
 
 .header__add-balance {
