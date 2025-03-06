@@ -155,6 +155,7 @@ body {
 .header__icon:hover, .header__icon__selected:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.1);
 }
 
 .rotate-on-hover{
@@ -274,7 +275,6 @@ main {
 }
 
 
-
 .match {
     display: flex;
     align-items: center;
@@ -289,7 +289,7 @@ main {
 
 .match:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 8px var(--white);
+    box-shadow: 0 0 8px var(--green1);
 }
 
 .team {
@@ -308,6 +308,9 @@ main {
 
 .matches.upcoming .match {
     border: 4px solid var(--gray2);
+}
+.matches.upcoming .match:hover{
+    box-shadow: 0 0 8px var(--gray2);
 }
 
 /* Footer */
@@ -446,6 +449,7 @@ main {
 .mobile-menu__icon__selected:hover {
     background-color: var(--green1);
     color: var(--white);
+    transform: scale(1.1);
 }
 
 
