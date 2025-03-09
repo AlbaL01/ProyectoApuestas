@@ -9,6 +9,9 @@ Este proyecto está bajo la licencia Creative Commons BY.
 ## Descripción del Proyecto
 Diseño de página web para la marca OneGoal. Es una plataforma web innovadora de apuestas deportivas enfocada en la interacción social. Se diferencia de otras plataformas de la misma índole en que OneGoal permite a los usuarios formar comunidades e interactuar libremente, además de que permite crear desafíos a otros usuarios con apuestas personalizados.
 
+## Versión
+Versión 1.
+
 ## Tecnologías Utilizadas
 
 - **Figma**: Herramienta para el diseño preliminar y prototipado de la interfaz.
