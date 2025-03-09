@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../assets/OneGoalLogos/logonegro.png">
     <title>Bubble</title>
-
-    <link rel="stylesheet" href="./CSS/index.css"> <!-- El CSS de index.css para que pueda reutilizar header y el footer-->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 
@@ -102,40 +100,7 @@
 
 <body class=" m-0 p-0 box-border font-sans bg-white text-black  justify-center bg-gray-100">
 
-    <header class="header">
-        <div class="header__logo">
-            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
-        </div>
-
-        <div class="header__icons">
-            <a href="index.html"><img src="../assets/header/si--home-line.png" alt="Home"
-                    class="header__icon header__icon_desktop" /></a>
-            <!-- hay que añadir el header__icon_desktop para que pueda cogerlo -->
-            <a href="bets.html"><img src="../assets/header/ph--soccer-ball.png" alt="Ball"
-                    class="header__icon header__icon_desktop" /></a>
-            <a href="chat.html"><img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat"
-                    class="header__icon header__icon_desktop" /></a>
-            <a href="personal.html"><img src="../assets/header/mingcute--user-3-line.png" alt="Avatar"
-                    class="header__icon header__icon_desktop" /></a>
-            <div class="header__icon_mobile">
-                <div> <a href="bubble.html"><img src="../assets/header/ia.png" alt="Bubble AI"
-                            class="header__icon__selected rotate-on-hover" /></a></div>
-                <div><img src="../assets/header/ri--search-line.png" alt="Search"
-                        class="header__icon rotate-on-hover" /></div>
-                <div><img src="../assets/header/lets-icons--setting-line.png" alt="Settings"
-                        class="header__icon rotate-on-hover" />
-                </div>
-            </div>
-        </div>
-
-        <div class="header__balance">
-            <div class="header__balance-text h4">$200,20</div>
-            <button class="header__balance-button rotate-on-hover"><img src="../assets/header/tabler--plus.png"
-                    alt="Settings" class="header__add-balance" /></button>
-        </div>
-    </header>
-
-    <main class="flex flex-col items-center mt-10">
+    <main class="flex flex-col items-center mt-20">
         <div class="bubble-container relative w-[300px] h-[300px] flex items-center justify-center rounded-full bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 shadow-lg mb-[80px] backdrop-blur-lg border-4 border-white/50 
         shadow-[0_0_20px_10px_#ffeb3b]">
         </div>
@@ -159,59 +124,9 @@
                 <p class="card-text text-sm text-gray-500">Personalízame a tu gusto.</p>
             </div>
         </div>
+        <a href="./index.html" class="mt-5 px-6 py-3 bg-lime-500 text-white font-semibold rounded-lg shadow-md hover:bg-lime-600 transition-all">Volver a la página principal</a>
+   
     </main>
-
-    <nav class="mobile-menu">
-        <a href="index.html" class="mobile-menu__link">
-            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
-        </a>
-        <a href="bets.html" class="mobile-menu__link">
-            <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon" />
-        </a>
-        <a href="chat.html" class="mobile-menu__link">
-            <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat" class="mobile-menu__icon" />
-        </a>
-        <a href="signin.html" class="mobile-menu__link">
-            <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon" />
-        </a>
-    </nav>
-    <footer class="footer">
-        <div class="footer__payments">
-            <a href="https://www.visa.com" target="_blank">
-                <img src="../assets/footer/visa.png" alt="Visa" class="footer__payment-icon">
-            </a>
-            <a href="https://www.paypal.com/es/signin" target="_blank">
-                <img src="../assets/footer/paypal.png" alt="PayPal" class="footer__payment-icon">
-            </a>
-            <a href="https://www.apple.com/apple-pay/" target="_blank">
-                <img src="../assets/footer/applepay.png" alt="Apple Pay" class="footer__payment-icon">
-            </a>
-            <a href="https://www.mastercard.com" target="_blank">
-                <img src="../assets/footer/mastercard.png" alt="MasterCard" class="footer__payment-icon">
-            </a>
-        </div>
-
-        <div class="footer__text-down">
-            <p>Terms And Conditions</p>
-            <p><img src="../assets/header/simple-icons--creativecommons.png" alt="cc" class="footerCC__icon" /><img
-                    src="../assets/header/ri--creative-commons-by-line.png" alt="by" class="footerCC__icon" /> 2023
-                OneGoal, Inc.</p>
-            <div class="footer__socials">
-                <a href="https://www.tiktok.com" target="_blank">
-                    <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="../assets/footer/facebook.png" alt="Facebook" class="footer__socials-icon">
-                </a>
-                <a href="https://www.instagram.com" target="_blank">
-                    <img src="../assets/footer/instagram.png" alt="Instagram" class="footer__socials-icon">
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <img src="../assets/footer/twitter.png" alt="Twitter" class="footer__socials-icon">
-                </a>
-            </div>
-        </div>
-    </footer>
 
 </body>
 
