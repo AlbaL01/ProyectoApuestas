@@ -29,5 +29,5 @@ Diseño de página web para la marca OneGoal. Es una plataforma web innovadora d
    git clone https://github.com/AlbaL01/ProyectoApuestas.git
    
 2. **Permitir el uso del micrófono**:
-   ```bash
+   
 Asegúrate de permitir el acceso al micrófono cuando el navegador lo solicite para poder interactuar con la IA "Bubble".
