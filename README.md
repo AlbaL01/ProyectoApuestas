@@ -16,14 +16,17 @@ Diseño de página web para la marca OneGoal. Es una plataforma web innovadora d
 - **GitHub**: Repositorio para almacenar el código fuente del proyecto.
 - **HTML5**: Para la estructura semántica de la página.
 - **CSS3**: Con Flexbox, CSS Grid y Media Queries para que la página web sea responsive.
-- **JavaScript**: Para la interactividad y la correcta funcionabilidad de la página web. (PRÓXIMAMENTE)
+- **JavaScript**: Para la interactividad y la correcta funcionabilidad de la página web.
+- **Tailwind**: Para la implementación de la Bubble IA.
 
 ## Diseño en Figma
 [Diseño del proyecto en Figma](https://www.figma.com/design/o9IX9nDr9v2VicffNPvpGM/ProyectoApuestas?node-id=0-1&t=d19j94U9cnpue5eU-1)
 
 ## Instrucciones de Instalación y Uso
 
-1. **Clonar el repositorio**:
+1. **Clonar el repositorio**:  
    ```bash
    git clone https://github.com/AlbaL01/ProyectoApuestas.git
-
+   
+2. **Permitir el uso del micrófono**:
+Asegúrate de permitir el acceso al micrófono cuando el navegador lo solicite para poder interactuar con la IA "Bubble".
