@@ -1,4 +1,3 @@
-/* Variables de colores */
 :root {
     --yellow: #E1FA14;
     --green1: #09FF00;
@@ -11,6 +10,21 @@
     --orange: #DE7C0B;
 }
 
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff2'),
+         url('../../assets/Fonts/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/Fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Estilos de tipografía */
 h1 {
     font-family: 'BeVietnamPro', sans-serif;
@@ -21,38 +35,58 @@ h1 {
 
 h2 {
     font-family: 'BeVietnamPro', sans-serif;
-    font-weight: 800;
-    /* Extrabold */
+    font-weight: 800; /* Extrabold */
     font-size: 22px;
     line-height: 52px;
     text-transform: uppercase;
+    text-align: left;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    /* Bold */
+    font-weight: 700; /* Bold */
     font-size: 22px;
     line-height: 48px;
+    text-align: left;
 }
 
 h4 {
     font-family: 'BeVietnamPro', sans-serif;
-    font-weight: 700;
-    /* Bold */
+    font-weight: 700; /* Bold */
     font-size: 20px;
     line-height: 32px;
     text-transform: uppercase;
+    color: var(--gray1);
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    /* Bold */
+    font-weight: 700; /* Bold */
     font-size: 16px;
     line-height: 24px;
 }
 
+.small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.extra-small {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.caption {
+    font-family: 'BeVietnamPro', sans-serif;
+    font-weight: 300; /* Light */
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -204,6 +238,20 @@ main {
     border-radius: 50%;
     object-fit: cover;
 }
+.profile__stat,
+.profile__stat-link,
+.profile__stat a,
+.profile__stat button {
+    padding: 15px 20px;  /* Asegura que los botones y enlaces sean lo suficientemente grandes */
+    min-width: 44px;  /* Garantiza que la zona táctil sea suficientemente amplia */
+    font-size: 16px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+}
 
 .profile__status {
     position: absolute;
@@ -239,48 +287,61 @@ main {
 }
 
 /* Estadísticas */
-.profile__stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 10px 0;
-}
-
+/* Estadísticas */
 .profile__stat {
-    padding: 10px 15px;
+    padding: 15px 20px;  /* Aumentar el padding */
     border: 2px solid var(--green2);
     border-radius: 20px;
     transition: transform 0.3s ease;
-    height: 50px;
+    height: 80px;  /* Aumentar la altura para dar más espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 44px;  /* Garantizar el mínimo tamaño táctil */
+    text-align: center; /* Asegura que el contenido esté centrado */
 }
 
 .profile__stat:hover {
     background-color: var(--green2);
-    transform: scale(1.1);
-
+    transform: scale(1.05);
+    padding: 15px 20px;  /* Aumentar el tamaño del área táctil */
 }
 
 .profile__stat-link {
-    text-decoration: none;
-    color: inherit;
     display: flex;
-    gap: 5px;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    gap: 2px;  /* Reducir el gap entre los elementos */
+    padding: 12px;
+    margin-top: 5px; 
+    min-width: 44px;
+    text-decoration: none;
+    color: var(--black);
 }
 
 .profile__stat-label {
     display: block;
-    margin-top: -5px;
+    margin-top: 0;  /* Eliminar margen superior si no es necesario */
 }
 
 .profile__stat-value {
-    margin-top: -10px;
+    margin-top: 0;  /* Eliminar margen superior para acercar el valor */
     font-weight: bold;
 }
 
+
+.profile__stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;  /* Aumentar el espaciado entre los elementos */
+    margin: 10px 0;
+}
+
+/* Ajustes específicos para "following" y "followers" */
+.profile__stat .profile__stat-label, .profile__stat .profile__stat-value {
+    text-align: center;
+    margin: 0; /* Aseguramos que no haya márgenes que empujen los elementos fuera de lugar */
+}
 /* About Me */
 .profile__about {
     border: 2px solid var(--green2);
@@ -291,7 +352,7 @@ main {
 
 .profile__about-title {
     font-size: 14px;
-    color: gray;
+    color: var(--black);
     text-transform: uppercase;
 }
 
@@ -311,13 +372,15 @@ main {
 }
 
 .profile__button--edit {
-    background-color: var(--gray2);
-    transition: transform 0.3s ease;
+    background-color: var(--gray1);
     color: var(--white);
+    padding: 5px 20px;
+    transition: transform 0.3s ease;
 }
 
 .profile__button--edit:hover {
     background-color: var(--green3);
+    color: var(--black);
     transform: scale(1.1);
 }
 
@@ -329,10 +392,9 @@ main {
     gap: 15px;
     margin: auto;
 }
-
 .profile__history-card {
     border: 2px solid var(--green2);
-    padding: 15px;
+    padding: 30px;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -342,7 +404,6 @@ main {
     position: relative;
 }
 
-/* Títulos dentro de cada tarjeta */
 .profile__history-card-title {
     font-size: 18px;
     font-weight: bold;
@@ -352,13 +413,9 @@ main {
 /* Subtítulo del "See More" */
 .profile__history-card-subtitle {
     font-size: 12px;
-    color: var(--gray1);
+    color: var(--black);
     text-decoration: none;    
-    transition: transform 0.3s ease;
-}
-.profile__history-card-subtitle:hover{
-    transform: scale(1.05);
-    color:var(--black);
+    
 }
 /* Para la parte superior de cada tarjeta (title + see more) */
 .profile__history-card>.top {
@@ -393,6 +450,11 @@ main {
     right: 15px;
     bottom: 65%;
     transform: translateY(50%);
+}
+
+.profile__history-title{
+    
+    text-align: left !important;
 }
 
 /* Footer */
@@ -458,7 +520,6 @@ main {
     align-items: center;
 }
 
-
 .footerCC__icon {
     width: auto;
     height: 23px;
@@ -468,6 +529,7 @@ main {
     align-items: center;
     transition: background 0.3s;
 }
+
 /* Estilos para el menú móvil */
 .mobile-menu {
     position: fixed;
