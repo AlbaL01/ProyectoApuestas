@@ -10,28 +10,45 @@
 </head>
 
 <body>
-    
-    <header class="header">
+    <header class="header fade-in">
         <div class="header__logo">
-            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="Logo de OneGoal" class="header__logo-img">
+            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
         </div>
-    
         <div class="header__icons">
-            <a href="./index.html" aria-label="Go to the home page" title="Home Page">
-                <img src="../assets/header/si--home-line.png" alt="Home icon" class="header__icon header__icon_desktop" />
+            <a href="./index.html" aria-label="Go to the main page" title="Go to the main page">
+                <img src="../assets/header/si--home-line.png" alt="Home" class="header__icon header__icon_desktop" />
             </a>
-            <a href="./bets.html" aria-label="Go to bets" title="Place your bets">
-                <img src="../assets/header/ph--soccer-ball.png" alt="Soccer ball icon" class="header__icon header__icon_desktop" />
+            <a href="./bets.html" aria-label="Go to the bets" title="Go to the bets">
+                <img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon header__icon_desktop" />
             </a>
-            <a href="./chat.html" aria-label="Go to chat" title="Join the conversation">
-                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat icon" class="header__icon header__icon_desktop" />
+            <a href="./chat.html" aria-label="Go to the chat" title="Go to chat to converse">
+                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat" class="header__icon header__icon_desktop" />
             </a>
-            <a href="./signin.html" aria-label="Go to user profile" title="Your profile">
-                <img src="../assets/header/mingcute--user-3-line.png" alt="User avatar icon" class="header__icon header__icon_desktop" />
+            <a href="./signin.html" aria-label="Sign in" title="Access your account">
+                <img src="../assets/header/mingcute--user-3-line.png" alt="Avatar" class="header__icon__selected header__icon_desktop" />
             </a>
+            <div class="header__icon_mobile">
+                <div>
+                    <a href="./bubble.html" aria-label="Go to Bubble AI" title="Go to Bubble AI for assistance">
+                        <img src="../assets/header/ia.png" alt="Bubble AI" class="header__icon rotate-on-hover" />
+                    </a>
+                </div>
+                <div>
+                    <img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon rotate-on-hover" title="Search content">
+                </div>
+                <div>
+                    <img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon rotate-on-hover" title="Access settings">
+                </div>
+            </div>
+        </div>
+
+        <div class="header__balance">
+            <div class="header__balance-text h4" title="Current account balance">$200,20</div>
+            <button class="header__balance-button rotate-on-hover" title="Add balance to your account">
+                <img src="../assets/header/tabler--plus.png" alt="Add balance" class="header__add-balance" />
+            </button>
         </div>
     </header>
-    
     <main>
         <div class="signup">
             <div class="signup__container">
@@ -78,12 +95,65 @@
                     </button>
 
                     <p class="signup__footer extra-small">
-                        Already have an account? <a href="login.html" class="login__link extra-small" style="color: #0056b3; font-weight: bold;" title="Go to login">Log In</a>
+                        Already have an account? <a href="login.html" class="login__link extra-small" title="Go to login">Log In</a>
                     </p>
                 </form>
             </div>
         </div>
     </main>
+    <nav class="mobile-menu">
+        <a href="index.html" class="mobile-menu__link">
+            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
+        </a>
+        <a href="bets.html" class="mobile-menu__link">
+            <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon" />
+        </a>
+        <a href="chat.html" class="mobile-menu__link">
+            <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat" class="mobile-menu__icon" />
+        </a>
+        <a href="signin.html" class="mobile-menu__link">
+            <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon__selected" />
+        </a>
+    </nav>
+    <footer class="footer fade-in">
+        <section class="footer__payments">
+            <a href="https://www.visa.com" target="_blank" title="Pagar con Visa">
+                <img src="../assets/footer/visa.png" alt="Visa" class="footer__payment-icon">
+            </a>
+            <a href="https://www.paypal.com/es/signin" target="_blank" title="Pagar con PayPal">
+                <img src="../assets/footer/paypal.png" alt="PayPal" class="footer__payment-icon">
+            </a>
+            <a href="https://www.apple.com/apple-pay/" target="_blank" title="Pagar con Apple Pay">
+                <img src="../assets/footer/applepay.png" alt="Apple Pay" class="footer__payment-icon">
+            </a>
+            <a href="https://www.mastercard.com" target="_blank" title="Pagar con MasterCard">
+                <img src="../assets/footer/mastercard.png" alt="MasterCard" class="footer__payment-icon">
+            </a>
+        </section>
+        <p class="extra-small">&copy; 2023 OneGoal, Inc. - <a href="#" title="Ver términos y condiciones">Términos y Condiciones</a></p>
+    
+        <div class="footer__text-down">
+            <p class="extra-small">Terms And Conditions</p>
+            <p class="extra-small"><img src="../assets/header/simple-icons--creativecommons.png" alt="cc"
+                    class="footerCC__icon" /><img src="../assets/header/ri--creative-commons-by-line.png" alt="by"
+                    class="footerCC__icon" /> 2023
+                OneGoal, Inc.</p>
+            <div class="footer__socials">
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../assets/footer/tiktok.png" alt="Tiktok" class="footer__socials-icon">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../assets/footer/facebook.png" alt="Facebook" class="footer__socials-icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../assets/footer/instagram.png" alt="Instagram" class="footer__socials-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../assets/footer/twitter.png" alt="Twitter" class="footer__socials-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
