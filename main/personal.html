@@ -10,42 +10,42 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header fade-in">
         <div class="header__logo">
-            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="Logo de OneGoal" class="header__logo-img">
+            <img src="../assets/OneGoalLogos/logoenterosinfondo.png" alt="OneGoal Logo" class="header__logo-img">
         </div>
         <div class="header__icons">
-            <a href="./index.html" aria-label="Ir a la página principal">
-                <img src="../assets/header/si--home-line.png" alt="Icono de inicio" class="header__icon header__icon_desktop" />
+            <a href="./index.html" aria-label="Go to the main page" title="Go to the main page">
+                <img src="../assets/header/si--home-line.png" alt="Home" class="header__icon header__icon_desktop" />
             </a>
-            <a href="./bets.html" aria-label="Ir a las apuestas">
-                <img src="../assets/header/ph--soccer-ball.png" alt="Icono de balón de fútbol" class="header__icon header__icon_desktop" />
+            <a href="./bets.html" aria-label="Go to the bets" title="Go to the bets">
+                <img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon header__icon_desktop" />
             </a>
-            <a href="./chat.html" aria-label="Ir al chat">
-                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Icono de chat" class="header__icon header__icon_desktop" />
+            <a href="./chat.html" aria-label="Go to the chat" title="Go to chat to converse">
+                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat" class="header__icon header__icon_desktop" />
             </a>
-            <a href="./personal.html" aria-label="Ir al perfil de usuario">
-                <img src="../assets/header/mingcute--user-3-line.png" alt="Icono de avatar de usuario" class="header__icon__selected header__icon_desktop" />
+            <a href="./signin.html" aria-label="Sign in" title="Access your account">
+                <img src="../assets/header/mingcute--user-3-line.png" alt="Avatar" class="header__icon__selected header__icon_desktop" />
             </a>
             <div class="header__icon_mobile">
                 <div>
-                    <a href="./bubble.html" aria-label="Ir a la sección de Bubble AI">
-                        <img src="../assets/header/ia.png" alt="Icono de Bubble AI" class="header__icon rotate-on-hover" />
+                    <a href="./bubble.html" aria-label="Go to Bubble AI" title="Go to Bubble AI for assistance">
+                        <img src="../assets/header/ia.png" alt="Bubble AI" class="header__icon rotate-on-hover" />
                     </a>
                 </div>
                 <div>
-                    <img src="../assets/header/ri--search-line.png" alt="Icono de búsqueda" class="header__icon rotate-on-hover" />
+                    <img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon rotate-on-hover" title="Search content">
                 </div>
                 <div>
-                    <img src="../assets/header/lets-icons--setting-line.png" alt="Icono de configuraciones" class="header__icon rotate-on-hover" />
+                    <img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon rotate-on-hover" title="Access settings">
                 </div>
             </div>
         </div>
-    
+
         <div class="header__balance">
-            <div class="header__balance-text h4">$200,20</div>
-            <button class="header__balance-button rotate-on-hover" aria-label="Agregar saldo">
-                <img src="../assets/header/tabler--plus.png" alt="Icono de agregar saldo" class="header__add-balance" />
+            <div class="header__balance-text h4" title="Current account balance">$200,20</div>
+            <button class="header__balance-button rotate-on-hover" title="Add balance to your account">
+                <img src="../assets/header/tabler--plus.png" alt="Add balance" class="header__add-balance" />
             </button>
         </div>
     </header>
@@ -58,21 +58,21 @@
             <div class="profile__header">
                 <img src="../assets/img/ej3.jpg" alt="Profile Picture" class="profile__image">
                 <button class="profile__status" aria-label="Notifications">
-                    <img src="../assets/header/akar-icons--bell.png" alt="Notifications" class="profile__status-icon">
+                    <img src="../assets/header/akar-icons--bell.png" alt="Notifications" class="profile__status-icon" title="Notifications">
                 </button>
 
             </div>
 
             <div class="profile__stats">
-                <button class="profile__stat">
+                <button class="profile__stat" title="See followers">
                     <a href="#" class="profile__stat-link">
                         <span class="profile__stat-label small">Followers</span>
                         <h4 class="profile__stat-value">106</h4>
                     </a>
                 </button>
-                <button class="profile__stat">
+                <button class="profile__stat" title="See following">
                     <a href="#" class="profile__stat-link">
-                        <span class="profile__stat-label small">Following</span>
+                        <span class="profile__stat-label small" >Following</span>
                         <h4 class="profile__stat-value">106</h4>
                     </a>
                 </button>
@@ -85,8 +85,8 @@
                     et dolore magna aliqua.
                     Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident.
                 </p>
-                <button class="profile__button profile__button--edit">
-                    <p>Editar perfil</p>
+                <button class="profile__button profile__button--edit" title="Edit profile">
+                    <p>Edit profile</p>
                 </button>
             </div>
 
@@ -96,14 +96,14 @@
                     <div class="profile__history-card">
                         <div class="top">
                             <p class="profile__history-card-title">Hits</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your hits">See
                                     more</a></p>
                         </div>
                         <p class="profile__history-card-value top">34%</p> <!-- Porcentaje de la parte superior -->
 
                         <div class="bottom">
                             <p class="profile__history-card-title">Near Hits</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your near hits">See
                                     more</a></p>
                         </div>
                         <p class="profile__history-card-value bottom">42%</p> <!-- Porcentaje de la parte inferior -->
@@ -112,14 +112,14 @@
                     <div class="profile__history-card">
                         <div class="top">
                             <p class="profile__history-card-title">Near Misses</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your near misses">See
                                     more</a></p>
                         </div>
                         <p class="profile__history-card-value top">8%</p> <!-- Porcentaje de la parte superior -->
 
                         <div class="bottom">
                             <p class="profile__history-card-title">Misses</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your misses">See
                                     more</a></p>
                         </div>
                         <p class="profile__history-card-value bottom">16%</p> <!-- Porcentaje de la parte inferior -->

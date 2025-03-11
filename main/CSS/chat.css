@@ -483,25 +483,16 @@ main {
 
 /* Footer */
 .footer {
-    padding: 5rem 15px;
-    background-color: var(--white);
-    color: var(--gray1);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 3rem;
-    z-index: 20;
-    /* Asegura que el footer quede encima del chat_footer */
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--gray1);
+    margin-top: 20px;
 }
 
-.footer__payments {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
+/* Pagos */
 .footer__payment-icon {
     height: 40px;
     width: auto;
@@ -509,12 +500,18 @@ main {
 }
 
 .footer__payment-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
+.footer__payments {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 15px;
+}
 
+/* Redes sociales */
 .footer__socials {
-    display: inline-flex;
+    display: inline-flex; 
     align-items: center;
     gap: 15px;
     margin-top: 7px;
@@ -529,33 +526,31 @@ main {
 .footer__socials-icon:hover {
     transform: scale(1.2);
 }
-
 .footer__text-down {
-    font-size: 14px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     gap: 25px;
     text-align: center;
     width: auto;
 }
 
 .footer__text-down p {
-    margin: 0;
+    margin: 0; 
     display: flex;
     align-items: center;
 }
-
 .footerCC__icon {
     width: auto;
     height: 23px;
-    display: inline-flex;
+    display: inline-flex; 
     padding: 5px;
     justify-content: center;
     align-items: center;
     transition: background 0.3s;
 }
+
 
 /* Estilos para el menú móvil */
 .mobile-menu {
