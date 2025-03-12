@@ -64,13 +64,13 @@
             </div>
 
             <div class="profile__stats">
-                <button class="profile__stat" title="See followers">
+                <button class="profile__stat" aria-label="See followers">
                     <a href="#" class="profile__stat-link">
                         <span class="profile__stat-label small">Followers</span>
                         <h4 class="profile__stat-value">106</h4>
                     </a>
                 </button>
-                <button class="profile__stat" title="See following">
+                <button class="profile__stat" aria-label="See following">
                     <a href="#" class="profile__stat-link">
                         <span class="profile__stat-label small" >Following</span>
                         <h4 class="profile__stat-value">106</h4>
@@ -85,7 +85,7 @@
                     et dolore magna aliqua.
                     Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident.
                 </p>
-                <button class="profile__button profile__button--edit" title="Edit profile">
+                <button class="profile__button profile__button--edit" aria-label="Edit profile">
                     <p>Edit profile</p>
                 </button>
             </div>
@@ -96,33 +96,33 @@
                     <div class="profile__history-card">
                         <div class="top">
                             <p class="profile__history-card-title">Hits</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your hits">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" aria-label="See your hits">See
                                     more</a></p>
                         </div>
-                        <p class="profile__history-card-value top">34%</p> <!-- Porcentaje de la parte superior -->
+                        <p class="profile__history-card-value top">34%</p>
 
                         <div class="bottom">
                             <p class="profile__history-card-title">Near Hits</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your near hits">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" aria-label="See your near hits">See
                                     more</a></p>
                         </div>
-                        <p class="profile__history-card-value bottom">42%</p> <!-- Porcentaje de la parte inferior -->
+                        <p class="profile__history-card-value bottom">42%</p>
                     </div>
 
                     <div class="profile__history-card">
                         <div class="top">
                             <p class="profile__history-card-title">Near Misses</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your near misses">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" aria-label="See your near misses">See
                                     more</a></p>
                         </div>
-                        <p class="profile__history-card-value top">8%</p> <!-- Porcentaje de la parte superior -->
+                        <p class="profile__history-card-value top">8%</p>
 
                         <div class="bottom">
                             <p class="profile__history-card-title">Misses</p>
-                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" title="See your misses">See
+                            <p><a href="#" target="_blank" class="profile__history-card-subtitle extra-small" aria-label="See your misses">See
                                     more</a></p>
                         </div>
-                        <p class="profile__history-card-value bottom">16%</p> <!-- Porcentaje de la parte inferior -->
+                        <p class="profile__history-card-value bottom">16%</p>
                     </div>
                 </div>
 
@@ -130,19 +130,20 @@
         </section>
     </main>
     <nav class="mobile-menu">
-        <a href="./index.html" class="mobile-menu__link">
-            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
+        <a href="./index.html" class="mobile-menu__link" title="Go to the main page" aria-label="Go to the main page">
+            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon" />
         </a>
-        <a href="./bets.html" class="mobile-menu__link">
+        <a href="./bets.html" class="mobile-menu__link" title="Go to the bets" aria-label="Go to the bets">
             <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon" />
         </a>
-        <a href="./chat.html" class="mobile-menu__link">
+        <a href="./chat.html" class="mobile-menu__link" title="Go to chat to converse" aria-label="Go to chat to converse">
             <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat" class="mobile-menu__icon" />
         </a>
-        <a href="./signin.html" class="mobile-menu__link">
+        <a href="./signin.html" class="mobile-menu__link" title="Access your account" aria-label="Access your account">
             <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon__selected" />
         </a>
     </nav>
+    
     <footer class="footer fade-in">
         <section class="footer__payments">
             <a href="https://www.visa.com" target="_blank" title="Pagar con Visa">

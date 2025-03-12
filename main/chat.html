@@ -22,10 +22,12 @@
                 <img src="../assets/header/ph--soccer-ball.png" alt="Ball" class="header__icon header__icon_desktop" />
             </a>
             <a href="./chat.html" aria-label="Go to the chat" title="Go to chat to converse">
-                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat" class="header__icon__selected header__icon_desktop" />
+                <img src="../assets/header/fluent--chat-multiple-28-regular.png" alt="Chat"
+                    class="header__icon__selected header__icon_desktop" />
             </a>
             <a href="./personal.html" aria-label="Sign in" title="Access your account">
-                <img src="../assets/header/mingcute--user-3-line.png" alt="Avatar" class="header__icon header__icon_desktop" />
+                <img src="../assets/header/mingcute--user-3-line.png" alt="Avatar"
+                    class="header__icon header__icon_desktop" />
             </a>
             <div class="header__icon_mobile">
                 <div>
@@ -34,10 +36,12 @@
                     </a>
                 </div>
                 <div>
-                    <img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon rotate-on-hover" title="Search content">
+                    <img src="../assets/header/ri--search-line.png" alt="Search" class="header__icon rotate-on-hover"
+                        title="Search content">
                 </div>
                 <div>
-                    <img src="../assets/header/lets-icons--setting-line.png" alt="Settings" class="header__icon rotate-on-hover" title="Access settings">
+                    <img src="../assets/header/lets-icons--setting-line.png" alt="Settings"
+                        class="header__icon rotate-on-hover" title="Access settings">
                 </div>
             </div>
         </div>
@@ -49,7 +53,7 @@
             </button>
         </div>
     </header>
-    
+
     <div class="container">
         <div class="sidebar">
             <h3>Messages</h3>
@@ -99,10 +103,10 @@
                 <img src="../assets/img/ej1.jpg" alt="User" class="user__img">
                 <span class="small">Data</span>
                 <div class="chat__options">
-                    <button class="icon__header"><img src="../assets/chat/streamline--webcam-video.png"
+                    <button class="icon__header" title="Start videocall" aria-label="Start videocall"><img src="../assets/chat/streamline--webcam-video.png"
                             alt="icons"></button>
-                    <button class="icon__header"><img src="../assets/chat/mynaui--telephone.png" alt="icons"></button>
-                    <button class="icon__header"><img src="../assets/chat/mage--dots.png" alt="icons"></button>
+                    <button class="icon__header" title="Start call" aria-label="Start call"><img src="../assets/chat/mynaui--telephone.png" alt="icons"></button>
+                    <button class="icon__header" title="More options" aria-label="More options"><img src="../assets/chat/mage--dots.png" alt="icons"></button>
                 </div>
             </div>
 
@@ -128,11 +132,11 @@
             </div>
 
             <div class="chat__footer">
-                <button class="icon__footer"><img src="../assets/chat/fluent--emoji-32-light.png" alt="icons"></button>
-                <button class="icon__footer"><img src="../assets/chat/codex--file.png" alt="icons"></button>
+                <button class="icon__footer" title="Send emojis" aria-label="Send emojis"><img src="../assets/chat/fluent--emoji-32-light.png" alt="icons"></button>
+                <button class="icon__footer" title="Send files" aria-label="Send files"><img src="../assets/chat/codex--file.png" alt="icons"></button>
                 <input type="text" class="small" placeholder="Escribe un mensaje ">
                 <div class="chat__option">
-                    <button class="icon__footer"><img src="../assets/chat/iconamoon--microphone-light.png"
+                    <button class="icon__footer" title="Record audio" aria-label="Record audio"><img src="../assets/chat/iconamoon--microphone-light.png"
                             alt="icons"></button>
                 </div>
             </div>
@@ -140,20 +144,23 @@
         </div>
     </div>
     <nav class="mobile-menu">
-        <a href="./index.html" class="mobile-menu__link">
-            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
+        <a href="./index.html" class="mobile-menu__link" title="Go to the main page" aria-label="Go to the main page">
+            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon" />
         </a>
-        <a href="./bets.html" class="mobile-menu__link">
+        <a href="./bets.html" class="mobile-menu__link" title="Go to the bets" aria-label="Go to the bets">
             <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon" />
         </a>
-        <a href="./chat.html" class="mobile-menu__link">
+        <a href="./chat.html" class="mobile-menu__link" title="Go to chat to converse"
+            aria-label="Go to chat to converse">
             <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat"
                 class="mobile-menu__icon__selected" />
         </a>
-        <a href="./personal.html" class="mobile-menu__link">
+        <a href="./personal.html" class="mobile-menu__link" title="Access your personal page"
+            aria-label="Access your personal page">
             <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon" />
         </a>
     </nav>
+
 
     <footer class="footer fade-in">
         <section class="footer__payments">
@@ -170,7 +177,8 @@
                 <img src="../assets/footer/mastercard.png" alt="MasterCard" class="footer__payment-icon">
             </a>
         </section>
-        <p class="extra-small">&copy; 2023 OneGoal, Inc. - <a href="#" title="View terms and conditions">Terms and Conditions</a></p>
+        <p class="extra-small">&copy; 2023 OneGoal, Inc. - <a href="#" title="View terms and conditions">Terms and
+                Conditions</a></p>
 
         <div class="footer__text-down">
             <p class="extra-small">Terms And Conditions</p>
@@ -197,64 +205,62 @@
 
 </body>
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const chatWindow = document.querySelector('.chat__window');
-    const chatHeaderImg = document.querySelector('.chat__header .user__img');
-    const messagesContainer = document.querySelector('.messages-container');
-    const messageContainers = document.querySelectorAll('.message-container');
+    document.addEventListener('DOMContentLoaded', () => {
+        const chatWindow = document.querySelector('.chat__window');
+        const chatHeaderImg = document.querySelector('.chat__header .user__img');
+        const messagesContainer = document.querySelector('.chat__messages'); // Cambiar aquí
+        const messageContainers = document.querySelectorAll('.message-container');
 
-    function isMobileOrTablet() {
-        return window.matchMedia('(max-width: 1224px)').matches;
-    }
-
-    function handleMessageClick(event) {
-        if (isMobileOrTablet()) {
-            chatWindow.style.display = 'flex';
-            chatWindow.style.bottom = '0';
-        } else {
-            chatWindow.style.display = 'block';
+        function isMobileOrTablet() {
+            return window.matchMedia('(max-width: 1224px)').matches;
         }
 
-        // Cambiar la imagen del chat (si hubiera chats almacenados se podría cambiar parecido)
-        const userImage = event.target.closest('.message-container').querySelector('img'); 
-        if (userImage) {
-            chatHeaderImg.src = userImage.src;
+        function handleMessageClick(event) {
+            if (isMobileOrTablet()) {
+                chatWindow.style.display = 'flex';
+                chatWindow.style.bottom = '0';
+            } else {
+                chatWindow.style.display = 'block';
+            }
+
+            // Cambiar la imagen del chat (si hubiera chats almacenados se podría cambiar parecido)
+            const userImage = event.target.closest('.message-container').querySelector('img');
+            if (userImage) {
+                chatHeaderImg.src = userImage.src;
+            }
+
+            // Hacer scroll hacia abajo después de abrir el chat
+            scrollToBottom();
         }
 
-        // Hacer scroll hacia abajo después de abrir el chat
-        scrollToBottom();
-    }
+        function scrollToBottom() {
+            setTimeout(() => {
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 200);
+        }
 
-    function scrollToBottom() {
-        setTimeout(() => {
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }, 200);
-    }
+        messageContainers.forEach(container => {
+            container.addEventListener('click', handleMessageClick);
+        });
 
-    messageContainers.forEach(container => {
-        container.addEventListener('click', handleMessageClick);
+        // Manejo de resize para detectar teclado en móviles
+        window.addEventListener('resize', () => {
+            if (window.innerHeight < 500) {
+                messagesContainer.style.maxHeight = '50vh';
+                chatWindow.style.bottom = 'auto';
+            } else {
+                messagesContainer.style.maxHeight = '75vh';
+                chatWindow.style.bottom = '0';
+            }
+        });
+
+        // Ocultar chat en escritorio al redimensionar
+        window.addEventListener('resize', () => {
+            if (!isMobileOrTablet()) {
+                chatWindow.style.display = 'none';
+            }
+        });
     });
-
-    // Manejo de resize para detectar teclado en móviles
-    window.addEventListener('resize', () => {
-        if (window.innerHeight < 500) {
-            messagesContainer.style.maxHeight = '50vh';
-            chatWindow.style.bottom = 'auto';
-        } else {
-            messagesContainer.style.maxHeight = '75vh';
-            chatWindow.style.bottom = '0';
-        }
-    });
-
-    // Ocultar chat en escritorio al redimensionar
-    window.addEventListener('resize', () => {
-        if (!isMobileOrTablet()) {
-            chatWindow.style.display = 'none';
-        }
-    });
-});
-
-
 </script>
 
 

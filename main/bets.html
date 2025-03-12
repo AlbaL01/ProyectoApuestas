@@ -53,10 +53,10 @@
     <main>
         <h3>Betting</h3>
         <div class="tab-container">
-            <button class="tab_active" onclick="location.href='bets.html'">
+            <button class="tab_active" onclick="location.href='bets.html'" aria-label="Go to the bets">
                 <p>My Bets</p>
             </button>
-            <button class="tab" onclick="location.href='ranking.html'">
+            <button class="tab" onclick="location.href='ranking.html'" aria-label="Go to the ranking">
                 <p>Ranking</p>
             </button>
         </div>
@@ -116,19 +116,20 @@
     </main>
     
     <nav class="mobile-menu">
-        <a href="./index.html" class="mobile-menu__link">
-            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon mobile-menu__icon" />
+        <a href="./index.html" class="mobile-menu__link" title="Go to the main page" aria-label="Go to the main page">
+            <img src="../assets/header/si--home-line2.png" alt="Home" class="mobile-menu__icon" />
         </a>
-        <a href="./bets.html" class="mobile-menu__link">
+        <a href="./bets.html" class="mobile-menu__link" title="Go to the bets" aria-label="Go to the bets">
             <img src="../assets/header/ph--soccer-ball2.png" alt="Ball" class="mobile-menu__icon__selected" />
         </a>
-        <a href="./chat.html" class="mobile-menu__link">
+        <a href="./chat.html" class="mobile-menu__link" title="Go to chat to converse" aria-label="Go to chat to converse">
             <img src="../assets/header/fluent--chat-multiple-28-regular2.png" alt="Chat" class="mobile-menu__icon" />
         </a>
-        <a href="./personal.html" class="mobile-menu__link">
+        <a href="./personal.html" class="mobile-menu__link" title="Access your personal page" aria-label="Access your personal page">
             <img src="../assets/header/mingcute--user-3-line2.png" alt="Avatar" class="mobile-menu__icon" />
         </a>
     </nav>
+    
     <footer class="footer fade-in">
         <section class="footer__payments">
             <a href="https://www.visa.com" target="_blank">
