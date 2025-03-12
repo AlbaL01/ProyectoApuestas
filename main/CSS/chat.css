@@ -356,6 +356,7 @@ main {
 }
 
 .icon__header {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center !important;
