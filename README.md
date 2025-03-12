@@ -20,7 +20,7 @@ Versión 2.
 - **HTML5**: Para la estructura semántica de la página.
 - **CSS3**: Con Flexbox, CSS Grid y Media Queries para que la página web sea responsive.
 - **JavaScript**: Para la interactividad y la correcta funcionabilidad de la página web.
-- **Tailwind**: Para la implementación de la Bubble IA.
+- **Tailwind**: Para la implementación de la IA "Bubble".
 
 ## Diseño en Figma
 [Diseño del proyecto en Figma](https://www.figma.com/design/o9IX9nDr9v2VicffNPvpGM/ProyectoApuestas?node-id=0-1&t=d19j94U9cnpue5eU-1)
